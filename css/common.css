@@ -1,0 +1,38 @@
+@charset "utf8";
+/* 커피베이 프로젝트 공통디자인 CSS - common.css */
+
+/***** 1. 상단영역 *****/
+.top {
+    width: 100%;
+    max-width: 1390px;
+    margin: 0 auto;
+    padding: 40px 0 20px 0;
+}
+/*** 1-1. 상단 GNB ***/
+.GNB1 {
+    width: 1347px;
+    height: 28px;
+    padding: 8px 0;
+    border: 1px solid gray;
+    /* rgba(255,255,255,0.6); */
+    margin-bottom: 35px;
+    background-color: grey;
+    /* rgba(255,255,255,0.26); */
+}
+.GNB1 ul {
+    display: flex;
+}
+.navfl {
+    float: left;
+}
+.navfr {
+    float: right;
+}
+
+/*** 1-2. 하단 GNB ***/
+.GNB2 {
+    display: flex;
+}
+.nav ul {
+    display: flex;
+}
