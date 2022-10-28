@@ -1,7 +1,7 @@
 @charset "utf8";
 /* 커피베이 프로젝트 공통디자인 CSS - common.css */
 
-/***** 1. 상단영역 *****/
+/********** 1. 상단영역 **********/
 .top {
     width: 100%;
     max-width: 1390px;
@@ -22,19 +22,28 @@
 .GNB1 ul {
     display: flex;
 }
-.GNB1 li {
-    padding: 0 30px;
+.GNB1 li+li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 28px;
+    background-color: white;
 }
 .GNB1 li a {
+    font-family: 'NEXON Lv2 Gothic Bold';
     font-size: 12px;
     color: #ffffff;
     font-weight: 700;
     line-height: 28px;
+    padding: 0 30px;
     letter-spacing: -0.25px;
 }
+/* 1-1. 상단 GNB 좌측 */
 .navfl {
     float: left;
 }
+/* 1-1. 상단 GNB 우측 */
 .navfr {
     float: right;
 }
@@ -42,7 +51,63 @@
 /*** 1-2. 하단 GNB ***/
 .GNB2 {
     display: flex;
+    justify-content: space-between;
+}
+/* 1-2-1. 로고 */
+.logo img {
+    background-color: white;
+}
+/* 1-2-2. 중앙 네비게이션바 */
+.nav {
+    width: 660.2px;
+    height: 28px;
+    padding: 5px 0;
 }
 .nav ul {
     display: flex;
+    width: 660.2px;
+    height: 28px;
+    justify-content: space-around;
+}
+.nav a {
+font-size: 18px;
+color: grey;
+font-weight: 700;
+line-height: 35px;
+font-family: 'NEXON Lv2 Gothic Bold';
+}
+/* 1-2-3. 언어변경버튼 */
+/* 1-2-4. 기타 버튼 */
+.btn {
+    width: 134px;
+    padding: 5px 0;
+}
+.a_btn {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    line-height: 35px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    background-color: gray;
+    border-radius: 35px; 
+    /* #f3f3f3;; */
+    
+}
+.lang {
+    width: 134px;
+    padding: 5px 0;
+}
+.lang .sel {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    line-height: 35px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    background-color: gray;
+    /* #f3f3f3;; */
+    
 }
