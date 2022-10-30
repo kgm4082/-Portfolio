@@ -5,3 +5,14 @@
 @import url(./reset.css);
 @import url(./core.css);
 @import url(./common.css);
+
+/********** 2. 메인영역 **********/
+/***** 2-1. 메인배너 *****/
+.banner {
+    position: absolute; 
+    background: url(../images/main01.png) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+}
