@@ -40,11 +40,11 @@
     padding: 0 30px;
     letter-spacing: -0.25px;
 }
-/* 1-1. 상단 GNB 좌측 */
+/* 1-1-1. 상단 GNB 좌측 */
 .navfl {
     float: left;
 }
-/* 1-1. 상단 GNB 우측 */
+/* 1-1-2. 상단 GNB 우측 */
 .navfr {
     float: right;
 }
@@ -52,6 +52,10 @@
 .GNB2 {
     display: flex;
     justify-content: space-between;
+}
+/* 1-2-1. 로고 */
+.logo a {
+    display: block;
 }
 /* 1-2-2. 중앙 네비게이션바 */
 .nav {
@@ -73,12 +77,12 @@ font-weight: 700;
 line-height: 35px;
 font-family: 'NEXON Lv2 Gothic Bold';
 }
-/* 1-2-4. 기타 버튼 */
+/* 1-2-3. 기타 버튼 */
 .btn {
     width: 134px;
     padding: 5px 0;
 }
-.btn .a_btn {
+.btn a{
     display: block;
     font-size: 18px;
     color: #000;
@@ -97,5 +101,70 @@ font-family: 'NEXON Lv2 Gothic Bold';
     bottom: 50%;
     transform: translateY(50%);
     right: 28px;
+}
+.right_quick > ul > li:first-child {
+    margin-top: 0;
+}
+.right_quick > ul > li {
+    margin-top: 30px;
+}
+.btn01 {
+    background-color: #af231c;
+    padding: 24px 8px 26px 8px;
+    display: block;
+    text-align: center;
+    border-radius: 96px;
+}
+.text01 {
+    margin-bottom: 14px;
+}
+.text01 .text {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    font-weight: bold;
+    line-height: 28px;
+    letter-spacing: -1px;
+}
+.text01 .dot {
+    margin: 2px 0;
+}
+.text01 .dot div {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+.text02 {
+    border-top: 1px solid #9a1b15;
+    padding-top: 7px;
+}
+.text02 div {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+}
+
+.btn02 {
+    display: block;
+    text-align: center;
+    background-color: #727272;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 96px;
+    border-radius: 96px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+}
+/* 1-3-4. 맨위로가기 버튼 */
+.top_btn {
+    width: 94px;
+    padding: 0 11px;
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
     z-index: 100;
 }
