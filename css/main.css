@@ -9,7 +9,7 @@
 /********** 2. 메인영역 **********/
 /***** 2-1. 메인배너 *****/
 .banner {
-    position: absolute; 
+    /* position: absolute;  */
     background: url(../images/main01.png) no-repeat center/cover;
     width: 100%;
     height: 100%;

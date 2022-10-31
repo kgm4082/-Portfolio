@@ -1,4 +1,4 @@
-@charset "UTF8";
+@charset "utf-8";
 /* CGV PJ 공통클래스/웹폰트 CSS - core.css */
 /* 웹폰트, 공용클래스 */
 
@@ -7,4 +7,19 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+/********** 2. 공통 class **********/
+
+.ibx {
+    width: 100%;
+    max-width: 1390px;
+    margin: 0 auto;
+    padding: 40px 0 20px 0;
+    display: block;
+}
+
+.pt {
+    height: 100vh;
+    outline: 1px dashed gray;
 }
