@@ -7,21 +7,65 @@
 @import url(./common.css);
 
 body {
-  -ms-overflow-style: none;
-  border: 1px solid red;
+    -ms-overflow-style: none;
+    border: 1px solid red;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 /********** 2. 메인영역 **********/
-
+.GNB1 {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.26);
+}
 /***** 2-1. 메인배너 *****/
+/*** 2-1-1. 배너 ***/
 .banner {
-  /* position: absolute;  */
-  background: url(../images/main01.png) no-repeat center/cover;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  z-index: -1;
+    /* position: absolute;  */
+    background: url(../images/main01.png) no-repeat center/cover;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+}
+/*** 2-1-2. 왼쪽 숫자바 ***/
+.left_nav {
+    position: fixed;
+    width: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1%;
+    z-index: 100;
+}
+.nav_cont .txt {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    text-align: center;
+    font-family: "Gotham", sans-serif;
+}
+.bar {
+    width: 2px;
+    height: 133px;
+    margin: 0 auto;
+    background-color: #666666;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.bar .line {
+    width: 100%;
+    height: 19px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.32);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: all 0.5s ease;
 }

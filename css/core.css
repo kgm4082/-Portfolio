@@ -2,12 +2,16 @@
 /* CGV PJ 공통클래스/웹폰트 CSS - core.css */
 /* 웹폰트, 공용클래스 */
 
-@font-face {
-    font-family: 'NEXON Lv2 Gothic Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url(//cdn.design-factory.co.kr/_font/nexon_lv2_gothic/fonts.css);
+@import url(//cdn.design-factory.co.kr/_font/poppins/fonts.css);
+@import url(//cdn.design-factory.co.kr/_font/gotham/fonts.css);
+
+/*
+font-family:"Gotham", sans-serif;
+font-family:"NotoSansKR", sans-serif;
+font-family:"NEXON Lv2 Gothic", sans-serif;
+font-family:"Poppins", sans-serif;
+*/
 
 /********** 2. 공통 class **********/
 
@@ -19,7 +23,7 @@
     display: block;
 }
 
-.pt {
+.section {
     height: 100vh;
     outline: 1px dashed gray;
 }
