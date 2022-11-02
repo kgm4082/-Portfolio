@@ -2,252 +2,287 @@
 /* 커피베이 프로젝트 공통디자인 CSS - common.css */
 
 /******************** 1. 상단영역 ********************/
-#top{    
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+#top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .top {
-    max-width: 1388px;
+  max-width: 1390px;
 }
-/********** 1-1. 상단 GNB **********/
+
+/********** 1-1. 언어변경버튼 **********/
+.lang {
+  width: 1190.55px;
+  height: 40px;
+  margin: 0 91.71px 0 107.74px;
+}
+.lang ul {
+  display: flex;
+  float: right;
+  width: 132.34px;
+  height: 100%;
+  align-items: center;
+  border-radius: 5px;
+}
+.lang > ul > li {
+  width: 100%;
+}
+.lang li + li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.1px;
+  margin: 8px 0;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.lang li a {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 28px;
+  padding: 0 25px;
+  letter-spacing: -0.25px;
+  font-family: "NEXON Lv2 Gothic", sans-serif;
+}
+/********** 1-2. 상단 GNB **********/
 .GNB1 {
-    height: 28px;
-    border: 1px solid #af231c;
-    padding: 8px 0;
-    margin-bottom: 35px;
-    background-color: #af231c;
+  height: 28px;
+  border: 1px solid #af231c;
+  padding: 8px 0;
+  margin-bottom: 35px;
+  background-color: #af231c;
 }
 .GNB1 ul {
-    max-width: 970px;
-    display: flex;
+  max-width: 970px;
+  display: flex;
 }
-.GNB1 li+li::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: 28px;
-    background-color: white;
+.GNB1 li + li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.1px;
+  height: 28px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .GNB1 li a {
-    font-size: 12px;
-    color: #ffffff;
-    font-weight: 700;
-    line-height: 28px;
-    padding: 0 30px;
-    letter-spacing: -0.25px;
-    font-family:"NEXON Lv2 Gothic", sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 28px;
+  padding: 0 30px;
+  letter-spacing: -0.25px;
+  font-family: "NEXON Lv2 Gothic", sans-serif;
 }
-/*** 1-1-1. 상단 GNB 좌측 ***/
+/*** 1-2-1. 상단 GNB 좌측 ***/
 .navfl {
-    float: left;
+  float: left;
 }
-/*** 1-1-2. 상단 GNB 우측 ***/
+/*** 1-2-2. 상단 GNB 우측 ***/
 .navfr {
-    float: right;
+  float: right;
 }
-/********** 1-2. 하단 GNB **********/
+/********** 1-3. 하단 GNB **********/
 .GNB2 {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
 }
-/*** 1-2-1. 로고 ***/
+/*** 1-3-1. 메인로고 ***/
 .logo a {
-    display: block;
+  display: block;
 }
-/*** 1-2-2. 중앙 네비게이션바 ***/
+/*** 1-3-2. 중앙 네비게이션바 ***/
 .nav {
-    width: 770.2px;
-    height: 28px;
-    padding: 5px 0;
-    margin: 0 138.4px;
-    left: 345px;
-    text-align: center;
+  width: 770.2px;
+  height: 28px;
+  padding: 5px 0;
+  left: 345px;
+  text-align: center;
 }
 .nav ul {
-    display: flex;
+  display: flex;
 }
-.nav>ul>li {
-    position: relative;
-    padding: 0 54.99px;
+.nav > ul > li {
+  position: relative;
+  padding: 0 54.99px;
 }
-.nav>ul>li>a {
-font-size: 18px;
-color: #ffffff;
-font-weight: 700;
-line-height: 35px;
-font-family:"NEXON Lv2 Gothic", sans-serif;
+.nav > ul > li > a {
+  position: static;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 35px;
+  font-family: "NEXON Lv2 Gothic", sans-serif;
 }
-/*** 1.2-3 서브메뉴 ***/
-.smenu{
-    position: absolute;
-    width: 80%;
-    top: 50px;
-    /* left: 25px; */
-    height: 0px;
-    overflow: hidden;
-    background-color: #e35d35ef;
-    /* #efe9e0; */
-    border-radius: 10px;
+/*** 서브메뉴 ***/
+.smenu {
+  position: absolute;
+  width: 80%;
+  top: 50px;
+  /* left: 25px; */
+  height: 0px;
+  overflow: hidden;
+  background-color: #e35d35ef;
+  /* #efe9e0; */
+  border-radius: 10px;
 
-    transition: height .4s ease-out;
-  }
+  transition: height 0.4s ease-out;
+}
 
 /*** 서브메뉴 첫번째 ***/
-  .nav>ul>li:first-child .smenu {
-    left: 23px;
-    width: 70%;
-  }
-    .nav>ul>li:first-child:hover .smenu {
-    height: 160px;
-  }
+.nav > ul > li:first-child .smenu {
+  left: 23px;
+  width: 70%;
+}
+.nav > ul > li:first-child:hover .smenu {
+  height: 160px;
+}
 
 /*** 서브메뉴 두번째 ***/
-  .nav>ul>li:nth-child(2) .smenu {
-    left: 15px;
+.nav > ul > li:nth-child(2) .smenu {
+  left: 15px;
 }
-  .nav>ul>li:nth-child(2):hover .smenu {
-    height: 195px;
+.nav > ul > li:nth-child(2):hover .smenu {
+  height: 195px;
 }
 
 /*** 서브메뉴 네번째 ***/
-.nav>ul>li:nth-child(4) .smenu {
-    left: 18px;
+.nav > ul > li:nth-child(4) .smenu {
+  left: 18px;
 }
-.nav>ul>li:nth-child(4):hover .smenu {
-    height: 125px;
+.nav > ul > li:nth-child(4):hover .smenu {
+  height: 125px;
 }
 
 /*** 서브메뉴 다섯번째 ***/
-.nav>ul>li:last-child .smenu {
-    left: 20px;
-    width: 70%;
-  }
-.nav>ul>li:last-child:hover .smenu {
-    height: 125px;
-  }
-  .smenu ul {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-  }
-  .smenu>ul>li>a {
-    font-size: 16px;
-    color: #000;
-    font-weight: 500;
-    line-height: 35px;
-    font-family:"NEXON Lv2 Gothic", sans-serif;
-
-  }
-/*** 1-2-3. 기타 버튼 ***/
+.nav > ul > li:last-child .smenu {
+  left: 25px;
+  width: 70%;
+}
+.nav > ul > li:last-child:hover .smenu {
+  height: 125px;
+}
+.smenu ul {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.smenu > ul > li > a {
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+  line-height: 35px;
+  font-family: "NEXON Lv2 Gothic", sans-serif;
+}
+/*** 1-3-3. 기타 버튼 ***/
 #btn {
-    width: 134px;
-    height: 35px;
-    padding: 5px 0;
+  width: 134px;
+  height: 35px;
+  padding: 5px 0;
 }
-#btn .a_btn{
-    display: block;
-    font-size: 18px;
-    color: #000;
-    text-align: center;
-    font-weight: 700;
-    line-height: 35px;
-    font-family:"NEXON Lv2 Gothic", sans-serif;
-    background-color: #f3f3f3;
-    border-radius: 35px; 
-    
+#btn .a_btn {
+  display: block;
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  line-height: 35px;
+  font-family: "NEXON Lv2 Gothic", sans-serif;
+  background-color: #f3f3f3;
+  border-radius: 35px;
 }
-/********** 1-3. 큇슬록 **********/
+/********** 1-4. 큇슬록 **********/
 .right_quick {
-    width: 96px;
-    position: fixed;
-    bottom: 50%;
-    transform: translateY(50%);
-    right: 28px;
+  width: 96px;
+  position: fixed;
+  bottom: 50%;
+  transform: translateY(50%);
+  right: 28px;
 }
 .right_quick > ul > li:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 .right_quick > ul > li {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 .btn01 {
-    background-color: #af231c;
-    padding: 24px 8px 26px 8px;
+  background-color: #af231c;
+  padding: 24px 8px 26px 8px;
 }
 .right_quick > ul > li .a_btn {
-    display: block;
-    text-align: center;
-    border-radius: 96px;
+  display: block;
+  text-align: center;
+  border-radius: 96px;
 }
 .text01 {
-    margin-bottom: 14px;
+  margin-bottom: 14px;
 }
 .text01 .text {
-    font-size: 20px;
-    color: #ffffff;
-    font-family:"NEXON Lv2 Gothic", sans-serif;
-    font-weight: bold;
-    line-height: 28px;
-    letter-spacing: -1px;
+  font-size: 20px;
+  color: #ffffff;
+  font-family: "NEXON Lv2 Gothic", sans-serif;
+  font-weight: bold;
+  line-height: 28px;
+  letter-spacing: -1px;
 }
 .text01 .dot {
-    margin: 2px 0;
+  margin: 2px 0;
 }
 .text01 .dot div {
-    width: 6px;
-    height: 6px;
-    background-color: #ffffff;
-    margin: 0 auto;
-    border-radius: 6px;
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 6px;
 }
 .text02 {
-    border-top: 1px solid #af231c;
-    padding-top: 7px;
+  border-top: 1px solid #af231c;
+  padding-top: 7px;
 }
 .text02 div {
-    font-size: 16px;
-    color: #ffffff;
-    font-weight: 500;
-    line-height: 24px;
-    font-family:"NEXON Lv2 Gothic", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 24px;
+  font-family: "NEXON Lv2 Gothic", sans-serif;
 }
 
 .btn02 {
-    background-color: #727272;
-    font-size: 16px;
-    color: #ffffff;
-    font-weight: 500;
-    line-height: 96px;
-    font-family:"NEXON Lv2 Gothic", sans-serif;
+  background-color: #727272;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 96px;
+  font-family: "NEXON Lv2 Gothic", sans-serif;
 }
-/********** 1-3-4. 맨위로가기 버튼 **********/
+/********** 1-5. 맨위로가기 버튼 **********/
 .top_btn {
-    width: 94px;
-    padding: 0 11px;
-    position: fixed;
-    bottom: 18px;
-    right: 18px;
-    z-index: 100;
+  width: 94px;
+  padding: 0 11px;
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 100;
 }
-.top_btn a{
-    display: block;
-    background-color: #0e0d0d;
-    padding: 15px 0;
-    text-align: center;
+.top_btn a {
+  display: block;
+  background-color: #0e0d0d;
+  padding: 15px 0;
+  text-align: center;
 }
 .top_btn .arrow {
-    /* height: 10px; */
-    padding-bottom: 17px;
+  /* height: 10px; */
+  padding-bottom: 17px;
 }
 .arrow img {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
-.top_btn>a .text div {
-    font-size: 18px;
-    color: #ffffff;
-    line-height: 18px;
-    font-family:"Poppins", sans-serif;
-}   
+.top_btn > a .text div {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 18px;
+  font-family: "Poppins", sans-serif;
+}
