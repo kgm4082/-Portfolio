@@ -51,7 +51,6 @@
 /********** 1-2. 하단 GNB **********/
 .GNB2 {
     display: flex;
-    justify-content: space-between;
 }
 /*** 1-2-1. 로고 ***/
 .logo a {
@@ -59,27 +58,83 @@
 }
 /*** 1-2-2. 중앙 네비게이션바 ***/
 .nav {
-    width: 660.2px;
+    width: 770.2px;
     height: 28px;
     padding: 5px 0;
+    margin: 0 138.4px;
+    left: 345px;
     text-align: center;
 }
 .nav ul {
     display: flex;
-    width: 660.2px;
-    height: 28px;
-    justify-content: space-between;
 }
-.nav a {
+.nav>ul>li {
+    position: relative;
+    padding: 0 54.99px;
+}
+.nav>ul>li>a {
 font-size: 18px;
 color: #ffffff;
 font-weight: 700;
 line-height: 35px;
 font-family:"NEXON Lv2 Gothic", sans-serif;
 }
+.smenu{
+    /* 앱솔루트 포지션 */
+    position: absolute;
+    width: 80%;
+    top: 50px;
+    /* left: 25px; */
+    /* 메뉴 숨기기 
+    - 높이값0,overflow:hidden */
+    height: 250px;
+    /* overflow: hidden; */
+    /* 주의: 숨기는 박스에 상하패딩이
+     있으면 완전히 숨길 수 없다! */
+
+    /* 배경색 
+    - 상위메뉴 오버시 배경색과 동일 */
+    background-color: #E35E35; 
+    /* #efe9e0; */
+    /* 둥근모서리 - 양쪽아래만 */
+    border-radius: 5px;
+
+    /* 트랜지션: 속시이지 */
+    transition: height .4s ease-out;
+  }
+  .nav>ul>li:first-child .smenu {
+    left: 20px;
+    height: 160px;
+  }
+  .nav>ul>li:nth-child(2) .smenu {
+    left: 15px;
+    height: 195px;
+  }
+  .nav>ul>li:nth-child(4) .smenu {
+    left: 18px;
+    height: 125px;
+  }
+  .nav>ul>li:last-child .smenu {
+    left: 20px;
+    height: 125px;
+  }
+  .smenu ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .smenu>ul>li>a {
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    line-height: 35px;
+    font-family:"NEXON Lv2 Gothic", sans-serif;
+
+  }
 /*** 1-2-3. 기타 버튼 ***/
 #btn {
     width: 134px;
+    height: 35px;
     padding: 5px 0;
 }
 #btn .a_btn{
@@ -139,7 +194,7 @@ font-family:"NEXON Lv2 Gothic", sans-serif;
     border-radius: 6px;
 }
 .text02 {
-    border-top: 1px solid #9a1b15;
+    border-top: 1px solid rgb(51, 50, 48);
     padding-top: 7px;
 }
 .text02 div {
