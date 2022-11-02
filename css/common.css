@@ -32,13 +32,13 @@
     background-color: white;
 }
 .GNB1 li a {
-    font-family:"NEXON Lv2 Gothic", sans-serif;
     font-size: 12px;
     color: #ffffff;
     font-weight: 700;
     line-height: 28px;
     padding: 0 30px;
     letter-spacing: -0.25px;
+    font-family:"NEXON Lv2 Gothic", sans-serif;
 }
 /*** 1-1-1. 상단 GNB 좌측 ***/
 .navfl {
@@ -79,43 +79,52 @@ font-weight: 700;
 line-height: 35px;
 font-family:"NEXON Lv2 Gothic", sans-serif;
 }
+/*** 1.2-3 서브메뉴 ***/
 .smenu{
-    /* 앱솔루트 포지션 */
     position: absolute;
     width: 80%;
     top: 50px;
     /* left: 25px; */
-    /* 메뉴 숨기기 
-    - 높이값0,overflow:hidden */
-    height: 250px;
-    /* overflow: hidden; */
-    /* 주의: 숨기는 박스에 상하패딩이
-     있으면 완전히 숨길 수 없다! */
-
-    /* 배경색 
-    - 상위메뉴 오버시 배경색과 동일 */
-    background-color: #E35E35; 
+    height: 0px;
+    overflow: hidden;
+    background-color: #e35d35ef;
     /* #efe9e0; */
-    /* 둥근모서리 - 양쪽아래만 */
-    border-radius: 5px;
+    border-radius: 10px;
 
-    /* 트랜지션: 속시이지 */
     transition: height .4s ease-out;
   }
+
+/*** 서브메뉴 첫번째 ***/
   .nav>ul>li:first-child .smenu {
-    left: 20px;
+    left: 23px;
+    width: 70%;
+  }
+    .nav>ul>li:first-child:hover .smenu {
     height: 160px;
   }
+
+/*** 서브메뉴 두번째 ***/
   .nav>ul>li:nth-child(2) .smenu {
     left: 15px;
+}
+  .nav>ul>li:nth-child(2):hover .smenu {
     height: 195px;
-  }
-  .nav>ul>li:nth-child(4) .smenu {
+}
+
+/*** 서브메뉴 네번째 ***/
+.nav>ul>li:nth-child(4) .smenu {
     left: 18px;
+}
+.nav>ul>li:nth-child(4):hover .smenu {
     height: 125px;
-  }
-  .nav>ul>li:last-child .smenu {
+}
+
+/*** 서브메뉴 다섯번째 ***/
+.nav>ul>li:last-child .smenu {
     left: 20px;
+    width: 70%;
+  }
+.nav>ul>li:last-child:hover .smenu {
     height: 125px;
   }
   .smenu ul {
@@ -126,7 +135,7 @@ font-family:"NEXON Lv2 Gothic", sans-serif;
   .smenu>ul>li>a {
     font-size: 16px;
     color: #000;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 35px;
     font-family:"NEXON Lv2 Gothic", sans-serif;
 
@@ -194,7 +203,7 @@ font-family:"NEXON Lv2 Gothic", sans-serif;
     border-radius: 6px;
 }
 .text02 {
-    border-top: 1px solid rgb(51, 50, 48);
+    border-top: 1px solid #af231c;
     padding-top: 7px;
 }
 .text02 div {
@@ -229,11 +238,16 @@ font-family:"NEXON Lv2 Gothic", sans-serif;
     text-align: center;
 }
 .top_btn .arrow {
-    margin-bottom: 17px;
+    /* height: 10px; */
+    padding-bottom: 17px;
+}
+.arrow img {
+    display: block;
+    margin: 0 auto;
 }
 .top_btn>a .text div {
     font-size: 18px;
     color: #ffffff;
     line-height: 18px;
     font-family:"Poppins", sans-serif;
-}
+}   
