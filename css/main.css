@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* 커피베이 프로젝트 메인 페이지 CSS - main.css */
+/* 커피베이 포트폴리오 메인 페이지 CSS - main.css */
 
 /* 외부 CSS 합치기 */
 @import url(./reset.css);
@@ -80,22 +80,20 @@ body {
     right: 0;
     z-index: 10;
 }
-.b_btn {
-    float: right;
-    display: block;
-}
 .prev_btn {
-    display: inline-block;
+    float: right;
+    width: 100%;
+    max-width: 5.5%;
 }
 .prev_btn img {
-    width: 49.77px;
-    display: block;
+    max-width: 100%;
 }
 .next_btn {
-    display: inline-block;
-    margin-left: 12.7px;
+    float: right;
+    width: 100%;
+    max-width: 5.5%;
+    margin-left: 1.4%;
 }
 .next_btn img {
-    width: 49.77px;
-    display: block;
+    max-width: 100%;
 }
