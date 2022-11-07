@@ -8,7 +8,6 @@
 
 body {
     -ms-overflow-style: none;
-    border: 1px solid red;
 }
 
 ::-webkit-scrollbar {
@@ -22,12 +21,35 @@ body {
 /***** 2-1. 섹션1 *****/
 /*** 2-1-1. 배너 ***/
 .banner {
-    /* position: absolute;  */
-    background: url(../images/main01.png) no-repeat center/cover;
+    /* position: relative; */
+    display: block;
+}
+.banner li {
+    position: absolute; 
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
-    z-index: -1;
+    z-index: -5;
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+}
+#slide1 {
+    background: url(../images/main01.png) no-repeat center/cover;
+}
+#slide2 {
+    background: url(../images/main02.png) no-repeat center/cover;
+}
+#slide3 {
+    background: url(../images/main03.png) no-repeat center/cover;
+}
+#slide4 {
+    background: url(../images/main04.png) no-repeat center/cover;
+}
+#slide5 {
+    background: url(../images/main05.png) no-repeat center/cover;
+}
+#slide6 {
+    background: url(../images/main06.png) no-repeat center/cover;
 }
 /*** 2-1-2. 왼쪽 숫자바 ***/
 .left_nav {
@@ -81,6 +103,7 @@ body {
     z-index: 10;
 }
 .prev_btn {
+    cursor: pointer;
     float: right;
     width: 100%;
     max-width: 5.5%;
@@ -89,6 +112,7 @@ body {
     max-width: 100%;
 }
 .next_btn {
+    cursor: pointer;
     float: right;
     width: 100%;
     max-width: 5.5%;
@@ -97,3 +121,5 @@ body {
 .next_btn img {
     max-width: 100%;
 }
+
+

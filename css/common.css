@@ -224,10 +224,10 @@
 .text01 .text {
   font-size: 20px;
   color: #ffffff;
-  font-family: "NEXON Lv2 Gothic", sans-serif;
-  font-weight: bold;
+  font-family:"Poppins", sans-serif;
+  font-weight: 500;
   line-height: 28px;
-  letter-spacing: -1px;
+  letter-spacing: 0.5px;
 }
 .text01 .dot {
   margin: 2px 0;

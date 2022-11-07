@@ -2,6 +2,7 @@
 
 // import 가져오기
 import linksys from "../module/linksys.js";
+// import slide from "../module/ScrollAction.js";
 
 $(()=>{ 
     //////////////////// jQB ////////////////////
@@ -11,4 +12,6 @@ $(()=>{
 
     /* 링크시스템 */
     linksys();
+    // slide();
+
 }); //////////////////// jQB ////////////////////
