@@ -128,7 +128,7 @@
 .smenu {
   position: absolute;
   width: 80%;
-  top: 50px;
+  top: 70px;
   /* left: 25px; */
   height: 0px;
   overflow: hidden;
@@ -212,7 +212,7 @@
   background-color: rgba(255, 255, 255, 0.6);
   /* #ffffff; */
   transition: 0.4s ease-out;
-  border-bottom: 1px solid #ededed
+  border-bottom: 1px solid 
 }
 #top.on .top.ibx{
   padding: 40px 0 20px;
