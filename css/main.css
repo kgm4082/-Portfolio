@@ -20,10 +20,6 @@ body {
 }
 /***** 2-1. 섹션1 *****/
 /*** 2-1-1. 배너 ***/
-#slide {
-    /* position: relative; */
-    display: block;
-}
 #slide li {
     position: absolute; 
     width: 100%;
@@ -128,4 +124,3 @@ body {
 .pt2 {
     padding-top: 106px;
 }
-
