@@ -3,206 +3,204 @@
 
 /******************** 1. 상단영역 ********************/
 #top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  white-space: nowrap;
-  z-index: 9999;
+    /* 상단영역 고정 */
+    position: fixed;
+    width: 100%;
+    /* 자동 줄바꿈 X */
+    white-space: nowrap;
+    /* 항상 맨위 */
+    z-index: 9999;
 }
-.top {
-  max-width: 1390px;
-}
-
 /********** 1-1. 언어변경버튼 **********/
 .lang {
-  height: 40px;
-  margin: 0 91.71px 0 107.74px;
+    height: 40px;
+    margin: 0 91.71px 0 107.74px;
 }
 .lang ul {
-  display: flex;
-  float: right;
-  width: 132.34px;
-  height: 100%;
-  align-items: center;
-  border-radius: 5px;
+    display: flex;
+    float: right;
+    width: 132.34px;
+    height: 100%;
+    align-items: center;
+    border-radius: 5px;
 }
 .lang > ul > li {
-  width: 100%;
+    width: 100%;
 }
 .lang li + li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0.1px;
-  margin: 8px 0;
-  height: 14px;
-  background-color: rgba(255, 255, 255, 0.6);
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0.1px;
+    margin: 8px 0;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 .lang li a {
-  font-size: 12px;
-  color: #ffffff;
-  font-weight: 700;
-  line-height: 28px;
-  padding: 0 25px;
-  letter-spacing: -0.25px;
-  font-family: "NEXON Lv2 Gothic", sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 28px;
+    padding: 0 25px;
+    letter-spacing: -0.25px;
+    font-family: "NEXON Lv2 Gothic", sans-serif;
 }
-/********** 1-2. 상단 GNB **********/
-.GNB1 {
-  height: 28px;
-  border: 1px solid #af231c;
-  padding: 8px 0;
-  margin-bottom: 35px;
-  background-color: #af231c;
+
+/********** 1-2. 상단 네비 **********/
+.nav1 {
+    height: 28px;
+    padding: 8px 0;
+    margin-bottom: 35px;
+    border: 1px solid #af231c;
+    background-color: #af231c;
 }
-.GNB1 ul {
-  max-width: 970px;
-  display: flex;
+.nav1 ul {
+    /* 플렉스 박스 */
+    display: flex;
 }
-.GNB1 li + li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0.1px;
-  height: 28px;
-  background-color: rgba(255, 255, 255, 0.6);
+/* li 사이의 | 간격 */
+.nav1 li + li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0.1px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0.6);
 }
-.GNB1 li a {
-  font-size: 12px;
-  color: #ffffff;
-  font-weight: 700;
-  line-height: 28px;
-  padding: 0 30px;
-  letter-spacing: -0.25px;
-  font-family: "NEXON Lv2 Gothic", sans-serif;
+.nav1 li a {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 28px;
+    padding: 0 30px;
+    letter-spacing: -0.25px;
+    font-family: "NEXON Lv2 Gothic", sans-serif;
 }
 /*** 1-2-1. 상단 GNB 좌측 ***/
 .navfl {
-  float: left;
+    float: left;
 }
 /*** 1-2-2. 상단 GNB 우측 ***/
 .navfr {
-  float: right;
+    float: right;
 }
+
 /********** 1-3. 하단 GNB **********/
-.GNB2 {
-  display: flex;
-  justify-content: space-between;
+.nav2 {
+    display: flex;
+    justify-content: space-between;
 }
 /*** 1-3-1. 메인로고 ***/
 .sprite {
-  background: url(../images/spritesheet.png) no-repeat center/cover;
-  display: block;
+    background: url(../images/spritesheet.png) no-repeat center/cover;
+    display: block;
 }
 .sprite-main_logo {
-  width: 207px;
-  height: 45px;
-  background-position: 0px 0px;
+    width: 207px;
+    height: 45px;
+    background-position: 0px 0px;
 }
 /*** 1-3-2. 중앙 네비게이션바 ***/
-.nav {
-  width: 770.2px;
-  height: 28px;
-  padding: 5px 0;
-  left: 345px;
-  text-align: center;
+.GNB {
+    left: 345px;
+    width: 770.2px;
+    height: 28px;
+    padding: 5px 0;
+    text-align: center;
 }
-.nav ul {
-  display: flex;
-  /* justify-content: space-around; */
+.GNB ul {
+    /* 플렉스 박스 */
+    display: flex;
 }
-.nav > ul > li {
-  position: relative;
-  padding: 0 54.99px;
+.GNB > ul > li {
+    position: relative;
+    padding: 0 54.99px;
 }
-.nav > ul > li > a {
-  position: static;
-  font-size: 18px;
-  color: #ffffff;
-  font-weight: 700;
-  line-height: 35px;
-  font-family: "NEXON Lv2 Gothic", sans-serif;
+.GNB > ul > li > a {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 35px;
+    font-family: "NEXON Lv2 Gothic", sans-serif;
 }
 /*** 서브메뉴 ***/
 .smenu {
-  position: absolute;
-  width: 80%;
-  top: 70px;
-  /* left: 25px; */
-  height: 0px;
-  overflow: hidden;
-  background-color: 
-  /* #e35d35ef; */
-  #efe9e0;
-  border-radius: 10px;
+    position: absolute;
+    width: 80%;
+    top: 70px;
+    /* left: 25px; */
+    height: 0px;
+    overflow: hidden;
+    background-color: 
+    /* #e35d35ef; */ #efe9e0;
+    border-radius: 10px;
 
-  transition: height 0.4s ease-out;
+    transition: height 0.4s ease-out;
 }
 
 /*** 서브메뉴 첫번째 ***/
-.nav > ul > li:first-child .smenu {
-  left: 23px;
-  width: 70%;
+.GNB > ul > li:first-child .smenu {
+    left: 23px;
+    width: 70%;
 }
-.nav > ul > li:first-child:hover .smenu {
-  height: 160px;
+.GNB > ul > li:first-child:hover .smenu {
+    height: 160px;
 }
 
 /*** 서브메뉴 두번째 ***/
-.nav > ul > li:nth-child(2) .smenu {
-  left: 15px;
+.GNB > ul > li:nth-child(2) .smenu {
+    left: 15px;
 }
-.nav > ul > li:nth-child(2):hover .smenu {
-  height: 195px;
+.GNB > ul > li:nth-child(2):hover .smenu {
+    height: 195px;
 }
 
 /*** 서브메뉴 네번째 ***/
-.nav > ul > li:nth-child(4) .smenu {
-  left: 18px;
+.GNB > ul > li:nth-child(4) .smenu {
+    left: 18px;
 }
-.nav > ul > li:nth-child(4):hover .smenu {
-  height: 125px;
+.GNB > ul > li:nth-child(4):hover .smenu {
+    height: 125px;
 }
 
 /*** 서브메뉴 다섯번째 ***/
-.nav > ul > li:last-child .smenu {
-  left: 25px;
-  width: 70%;
+.GNB > ul > li:last-child .smenu {
+    left: 25px;
+    width: 70%;
 }
-.nav > ul > li:last-child:hover .smenu {
-  height: 125px;
+.GNB > ul > li:last-child:hover .smenu {
+    height: 125px;
 }
 .smenu ul {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
 .smenu > ul > li > a {
-  font-size: 16px;
-  color: #000;
-  font-weight: 500;
-  line-height: 35px;
-  font-family: "NEXON Lv2 Gothic", sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    line-height: 35px;
+    font-family: "NEXON Lv2 Gothic", sans-serif;
 }
-/*** 1-3-3. 기타 버튼 ***/
-#btn {
-  width: 134px;
-  height: 35px;
-  padding: 5px 0;
+/*** 1-3-3. 창업안내 버튼 ***/
+#create_btn {
+    width: 134px;
+    height: 35px;
+    padding: 5px 0;
 }
-#btn .a_btn {
-  display: block;
-  font-size: 18px;
-  color: #000;
-  text-align: center;
-  font-weight: 700;
-  line-height: 35px;
-  font-family: "NEXON Lv2 Gothic", sans-serif;
-  background-color: #f3f3f3;
-  border-radius: 35px;
+#create_btn a {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    line-height: 35px;
+    font-family: "NEXON Lv2 Gothic", sans-serif;
+    background-color: #f3f3f3;
+    border-radius: 35px;
 }
-/*************************************************/
+/********** 하단 네비 스크롤 액션 **********/
 #top.on{
   position: fixed;
   top: 0;
@@ -210,115 +208,169 @@
   width: 100%;
   white-space: nowrap;
   background-color: rgba(255, 255, 255, 0.6);
-  /* #ffffff; */
   transition: 0.4s ease-out;
   border-bottom: 1px solid 
 }
+#top.on .top.ibx {
+    padding: 40px 0 20px;
+}
+/* 스크롤액션시 언어변경버튼 및 상단 네비 사라짐 */
 #top.on .top.ibx{
   padding: 40px 0 20px;
 }
+/* 스크롤액션시 언어변경버튼 및 상단네비 숨김 */
 #top.on .lang { 
   display: none;
 }
-#top.on .GNB1 { 
+#top.on .nav1 { 
   display: none;
 }
+/* 스크롤액션시 메인로고 색변경 */
 #top.on .sprite-main_logo {
-  background-position: -0px -45px;
+    background-position: -0px -45px;
 }
-#top.on .nav > ul > li > a {
-  color: #000;
-}
-/********** 1-4. 큇슬록 **********/
-.right_quick {
-  width: 96px;
-  position: fixed;
-  bottom: 50%;
-  transform: translateY(50%);
-  right: 28px;
-}
-.right_quick > ul > li:first-child {
-  margin-top: 0;
-}
-.right_quick > ul > li {
-  margin-top: 30px;
-}
-.btn01 {
-  background-color: #af231c;
-  padding: 24px 8px 26px 8px;
-}
-.right_quick > ul > li .a_btn {
-  display: block;
-  text-align: center;
-  border-radius: 96px;
-}
-.text01 {
-  margin-bottom: 14px;
-}
-.text01 .text {
-  font-size: 20px;
-  color: #ffffff;
-  font-family:"Poppins", sans-serif;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 0.5px;
-}
-.text01 .dot {
-  margin: 2px 0;
-}
-.text01 .dot div {
-  width: 6px;
-  height: 6px;
-  background-color: #ffffff;
-  margin: 0 auto;
-  border-radius: 6px;
-}
-.text02 {
-  border-top: 1px solid #af231c;
-  padding-top: 7px;
-}
-.text02 div {
-  font-size: 16px;
-  color: #ffffff;
-  font-weight: 500;
-  line-height: 24px;
-  font-family: "NEXON Lv2 Gothic", sans-serif;
+/* 스크롤액션시 하단네비 색변경 */
+#top.on .GNB > ul > li > a {
+    color: #000;
 }
 
+/********** 1-4. 큇슬록 **********/
+.right_quick {
+    width: 96px;
+    position: fixed;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 28px;
+}
+.right_quick > ul > li:first-child {
+    margin-top: 0;
+}
+.right_quick > ul > li {
+    margin-top: 30px;
+}
+/* 버튼 공통 */
+.right_quick > ul > li .a_btn {
+    display: block;
+    text-align: center;
+    border-radius: 96px;
+}
+/* 첫번쨰 li버튼 */
+.btn01 {
+    background-color: #af231c;
+    padding: 24px 8px 26px 8px;
+}
+.btn011_cont {
+    margin-bottom: 14px;
+}
+.btn011_cont .text {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+}
+.btn011_cont .dot {
+    margin: 2px 0;
+}
+.btn011_cont .dot div {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+.btn012_cont {
+    border-top: 1px solid #af231c;
+    padding-top: 7px;
+}
+.btn012_cont div {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: "NEXON Lv2 Gothic", sans-serif;
+}
+/* 두번쨰 li버튼 */
 .btn02 {
-  background-color: #727272;
-  font-size: 16px;
-  color: #ffffff;
-  font-weight: 500;
-  line-height: 96px;
-  font-family: "NEXON Lv2 Gothic", sans-serif;
+    background-color: #727272;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 96px;
+    font-family: "NEXON Lv2 Gothic", sans-serif;
 }
 /********** 1-5. 맨위로가기 버튼 **********/
 .top_btn {
-  width: 94px;
-  padding: 0 11px;
-  position: fixed;
-  bottom: 18px;
-  right: 18px;
-  z-index: 100;
+    width: 94px;
+    padding: 0 11px;
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    z-index: 100;
 }
 .top_btn a {
-  display: block;
-  background-color: #0e0d0d;
-  padding: 15px 0;
-  text-align: center;
+    display: block;
+    background-color: #0e0d0d;
+    padding: 15px 0;
+    text-align: center;
 }
 .top_btn .arrow {
-  /* height: 10px; */
-  padding-bottom: 17px;
+    /* height: 10px; */
+    padding-bottom: 17px;
 }
 .arrow img {
-  display: block;
-  margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 .top_btn > a .text div {
-  font-size: 18px;
-  color: #ffffff;
-  line-height: 18px;
-  font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 18px;
+    font-family: "Poppins", sans-serif;
+}
+
+/******************** 3. 하단영역 ********************/
+#info {
+    width: 100%;
+    margin: 0 auto;
+}
+.info01_cont {
+    margin-bottom: 26px;
+    /* 플렉스박스 */
+    display: flex;
+}
+.info_nav {
+    float: left;
+    /* 플렉스박스 */
+    display: flex;
+}
+.info_nav ul {
+    display: flex;
+}
+.info_nav nav {
+    float: left;
+    background-color: #323232;
+    padding: 0 25px;
+    margin-left: 20px;
+    border-radius: 36px;
+}
+.info_nav nav:first-child {
+    background-color: #8f9198;
+    margin-left: 0;
+}
+.info li a {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 36px;
+    letter-spacing: 0.25px;
+    font-family: "NEXON Lv2 Gothic", sans-serif;
+}
+.info_nav li + li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0.1px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
 }

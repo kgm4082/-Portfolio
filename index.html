@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>커피베이 포트폴리오</title>
+        <!-- 커피베이 파비콘 -->
         <link rel="shortcut icon" href="./images/favicon.ico" />
+        <!-- 메인 CSS -->
         <link rel="stylesheet" href="./css/main.css">
         <!-- 제이쿼리 라이브러리 CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -16,7 +18,7 @@
         <script src="./js/common.js"></script>
         <!-- 메인 JS -->
         <script src="./js/main.js"></script>
-        <script src="./js/test.js"></script>
+        <!-- <script src="./js/test.js"></script> -->
     </head>
     <body>
         <!-- 1. 상단영역 -->
@@ -29,16 +31,16 @@
                         <li><a href="">EN</a></li>
                     </ul>
                 </div>
-                <!-- 1-2. 상단 GNB -->
-                <div class="GNB1 link">
-                    <!-- 1-2-1. 상단 GNB 좌측 -->
+                <!-- 1-2. 상단 네비 -->
+                <div class="nav1 link">
+                    <!-- 1-2-1. 상단 네비 좌측 -->
                     <div class="navfl">
                         <ul>
                             <li><a href="">APP 다운</a></li>
                             <li><a href="">가맹점 전용</a></li>
                         </ul>
                     </div>
-                    <!-- 1-2-2. 상단 GNB 우측 -->
+                    <!-- 1-2-2. 상단 네비 우측 -->
                     <div class="navfr">
                         <ul>
                             <li><a href="">INSTAGRAM</a></li>
@@ -47,13 +49,13 @@
                     </div>
                 </div>
                 <!-- 1-3. 하단 GNB -->
-                <div class="GNB2 link">
-                    <!-- 1-3-1. 메인로고  -->
+                <div class="nav2 link">
+                    <!-- 1-3-1. 메인로고 -->
                     <div class="logo">
                         <a href=""><i class="sprite sprite-main_logo"></i></a>
                     </div>
                     <!-- 1-3-2. 중앙 네비게이션바 -->
-                    <div class="nav">
+                    <div class="GNB">
                         <ul>
                             <li>
                                 <a href="">회사소개</a>
@@ -81,46 +83,50 @@
                                 </div>
                             </li>
                             <li><a href="">매장</a></li>
-                            <li><a href="">멤버십</a>
-                             <!-- 서브메뉴 -->
-                             <div class="smenu">
-                                <ul>
-                                    <li><a href="">커피베이 멤버십</a></li>
-                                    <li><a href="">이용혜택</a></li>
-                                    <li><a href="">자주묻는 질문</a></li>
-                                </ul>
-                            </div>
-                        </li></li>
-                            <li><a href="">새소식</a>
-                             <!-- 서브메뉴 -->
-                             <div class="smenu">
-                                <ul>
-                                    <li><a href="">공지사항</a></li>
-                                    <li><a href="">미디어</a></li>
-                                    <li><a href="">이벤트</a></li>
-                                </ul>
-                            </div>
-                        </li></li>
+                            <li>
+                                <a href="">멤버쉽</a>
+                                <!-- 서브메뉴 -->
+                                <div class="smenu">
+                                    <ul>
+                                        <li><a href="">커피베이 멤버십</a></li>
+                                        <li><a href="">이용혜택</a></li>
+                                        <li><a href="">자주묻는 질문</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">새소식</a>
+                                <!-- 서브메뉴 -->
+                                <div class="smenu">
+                                    <ul>
+                                        <li><a href="">공지사항</a></li>
+                                        <li><a href="">미디어</a></li>
+                                        <li><a href="">이벤트</a></li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-                    <!-- 1-3-3. 기타 버튼 -->
-                    <div id="btn">
-                        <a href="" class="a_btn">창업안내</a>
+                    <!-- 1-3-3. 창업안내 버튼 -->
+                    <div id="create_btn">
+                        <a href="" class="">창업안내</a>
                     </div>
                 </div>
-                <!-- 1-4. 퀵슬롯 -->
-                <div class="right_quick">
+                <!-- 1-4. 큇슬록 -->
+                <div class="right_quick link">
                     <ul>
                         <li>
                             <a href="" class="a_btn btn01">
-                                <div class="text01">
+                                <div class="btn011_cont">
                                     <div class="text">1644</div>
                                     <div class="dot">
-                                        <div></div>
+                                        <div class="dot">
+                                            <div></div>
+                                        </div>
                                     </div>
                                     <div class="text">1157</div>
                                 </div>
-                                <div class="text02">
+                                <div class="btn012_cont">
                                     <div>창업문의</div>
                                 </div>
                             </a>
@@ -134,10 +140,7 @@
                 <div class="top_btn">
                     <a href="#">
                         <div class="arrow">
-                            <img
-                                src="./images/top_btn_arrow.png"
-                                alt="화살표"
-                            />
+                            <img src="./images/top_btn_arrow.png" alt="화살표">
                         </div>
                         <div class="text">
                             <div>TOP</div>
@@ -150,8 +153,8 @@
         <div id="cont">
             <div class="cont">
                 <!-- 2-1. 섹션1 -->
-                <section class="section">
-                    <!-- 2-1-1. 메인배너 -->
+                <section class="section page">
+                    <!-- 2-1-1. 메인배너 슬라이드 -->
                     <div id="slide">
                         <li class="on"></li>
                         <li></li>
@@ -160,7 +163,7 @@
                         <li></li>
                         <li></li>
                     </div>
-                    <!-- 2-1-2. 왼쪽네비 -->
+                    <!-- 2-1-2. 왼쪽 고정 네비 -->
                     <div class="left_nav">
                         <div class="nav_cont">
                             <div class="txt">01</div>
@@ -170,7 +173,7 @@
                             <div class="txt">07</div>
                         </div>
                     </div>
-                    <!-- 2-1-3. 배너슬라이드 -->
+                    <!-- 2-1-3. 슬라이드 버튼 -->
                     <div class="slide_cont">
                         <div class="b_btn">
                             <div class="abtn next_btn">
@@ -182,19 +185,54 @@
                         </div>
                     </div>
                 </section>
-                <section class="section pt2">
+                <!-- 2-2. 섹션2 -->
+                <section class="section ibx page">
                     <h1>로딩중...</h1>
                 </section>
-                <section class="section pt2">
-                </section>
-                <section class="section pt2"></section>
-                <section class="section pt2"></section>
-                <section class="section pt2"></section>
-            </div>
+                <!-- 2-3. 섹션3 -->
+                <section class="section ibx page"></section>
+                <!-- 2-4. 섹션4 -->
+                <section class="section ibx page"></section>
+                <!-- 2-5. 섹션5 -->
+                <section class="section ibx page"></section>
+                <!-- 2-6. 섹션6 -->
+                <section class="section ibx page"></section>
+                <!-- 2-7. 섹션7 -->
+                <section class="section ibx page"></section>
+            </div>     
         </div>
         <!-- 3. 하단영역 -->
-        <div id="info">
-            <!-- <footer class="section"></footer> -->
+        <div id="info page">
+            <div class="info ibx">
+                <div class="info01_cont">
+                    <div class="info_nav">
+                        <nav>
+                            <ul>
+                                <li><a href="">고객문의</a></li>
+                                <li><a href="">가맹점 칭찬하기</a></li>
+                                <li><a href="">제휴·제안</a></li>
+                                <li><a href="">사이버윤리실</a></li>
+                            </ul>
+                        </nav>
+                        <nav>
+                            <ul>
+                                <li><a href="">개인정보처리방침</a></li>
+                                <li><a href="">멤버십이용약관</a></li>
+                                <li><a href="">이메일무단수집거부</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="info_select"></div>
+                </div>
+                <div class="info02_cont">
+                    <div class="info_logo"></div>
+                    <div class="info_text">
+                        <div class="text01_cont"></div>
+                        <div class="text02_cont"></div>
+                        <div class="text03_cont"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

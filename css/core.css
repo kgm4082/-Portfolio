@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* CGV PJ 공통클래스/웹폰트 CSS - core.css */
+/* 커피베이 포트폴리오 공통클래스/웹폰트 CSS - core.css */
 /* 웹폰트, 공용클래스 */
 
 @import url(//cdn.design-factory.co.kr/_font/nexon_lv2_gothic/fonts.css);
@@ -14,21 +14,25 @@ font-family:"Poppins", sans-serif;
 */
 
 /********** 2. 공통 class **********/
-
-.ibx {
+/* 상단영역 속박스 */
+.top.ibx {
     width: 100%;
     max-width: 1390px;
     margin: 0 auto;
     padding: 0 0 20px 0;
-    display: block;
 }
-
+/* 메인영역 겉박스 */
 .section {
     height: 969px;
     outline: 1px dashed gray;
 }
-
-#info .section{
-    height: 500px;
-    background-color: orange;
+.section.ibx {
+    padding-top: 106px;
+}
+/* 하단영역 속박스 */
+.info.ibx {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
 }

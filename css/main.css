@@ -13,14 +13,20 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+/* html,body {
+    overflow: hidden;
+} */
+
 /********** 2. 메인영역 **********/
-.GNB1 {
+.nav1 {
     border: 1px solid rgba(255, 255, 255, 0.6);
     background-color: rgba(255, 255, 255, 0.26);
 }
+
 /***** 2-1. 섹션1 *****/
-/*** 2-1-1. 배너 ***/
+/*** 2-1-1. 메인배너 슬라이드 ***/
 #slide li {
+    cursor: pointer;
     position: absolute; 
     width: 100%;
     height: 100%;
@@ -50,6 +56,7 @@ body {
 #slide li:nth-child(6) {
     background: url(../images/main06.png) no-repeat center/cover;
 }
+
 /*** 2-1-2. 왼쪽 숫자바 ***/
 .left_nav {
     position: fixed;
@@ -90,6 +97,7 @@ body {
     z-index: 10;
     transition: all 0.5s ease;
 }
+
 /* 2-1-3. 배너슬라이드 */
 .slide_cont {
     width: 100%;
@@ -121,6 +129,3 @@ body {
     max-width: 100%;
 }
 
-.pt2 {
-    padding-top: 106px;
-}
