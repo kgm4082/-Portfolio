@@ -27,13 +27,9 @@
 .lang > ul > li {
     width: 100%;
 }
-.lang li + li::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0.1px;
-    margin: 8px 0;
-    height: 14px;
+.lang .bar_li .bar{
+    width: 1px;
+    height: 13px;
     background-color: rgba(255, 255, 255, 0.6);
 }
 .lang li a {
@@ -59,11 +55,8 @@
     display: flex;
 }
 /* li 사이의 | 간격 */
-.nav1 li + li::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0.1px;
+.nav1 .bar_li .bar {
+    width: 1px;
     height: 28px;
     background-color: rgba(255, 255, 255, 0.6);
 }
@@ -335,13 +328,19 @@
     width: 100%;
     margin: 0 auto;
 }
+.info {
+    width: 1200px;
+    height: 167px;
+}
+/* 상단 컨텐츠 박스 */
 .info01_cont {
     margin-bottom: 26px;
     /* 플렉스박스 */
     display: flex;
+    justify-content: space-between;
 }
+/* 상단 왼쪽 네비 바 */
 .info_nav {
-    float: left;
     /* 플렉스박스 */
     display: flex;
 }
@@ -349,7 +348,6 @@
     display: flex;
 }
 .info_nav nav {
-    float: left;
     background-color: #323232;
     padding: 0 25px;
     margin-left: 20px;
@@ -359,6 +357,15 @@
     background-color: #8f9198;
     margin-left: 0;
 }
+.info_nav .bar_li{
+    width: 35px;
+    padding: 13px 0;
+}
+.info_nav .bar_li .bar{
+    width: 1px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
 .info li a {
     font-size: 14px;
     color: #ffffff;
@@ -366,11 +373,26 @@
     letter-spacing: 0.25px;
     font-family: "NEXON Lv2 Gothic", sans-serif;
 }
-.info_nav li + li::before {
-    content: "";
+/* 상단 오른쪽 셀렉트 박스 */
+.info_family {
+    float: right;
+    width: 160px;
+    padding-top: 6px;
+}
+#info_select {
+    width: 160px;
+    height: 30px;
+    border-bottom: 1px solid #000000;
+    padding: 0 29px 0 5px;
+    font-size: 13px;
+    color: #000000;
+    line-height: 21px;
+    font-family: "NEXON Lv2 Gothic", sans-serif;
+}
+#info_select option {
+    font-weight: normal;
     display: block;
-    position: absolute;
-    width: 0.1px;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
 }

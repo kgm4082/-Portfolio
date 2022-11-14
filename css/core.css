@@ -23,11 +23,12 @@ font-family:"Poppins", sans-serif;
 }
 /* 메인영역 겉박스 */
 .section {
-    height: 969px;
+    height: 100vh;
     outline: 1px dashed gray;
 }
 .section.ibx {
     padding-top: 106px;
+    height: 863px;
 }
 /* 하단영역 속박스 */
 .info.ibx {
