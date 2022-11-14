@@ -27,6 +27,7 @@ font-family:"Poppins", sans-serif;
     outline: 1px dashed gray;
 }
 .section.ibx {
+    position: relative;
     padding-top: 106px;
     height: 863px;
 }

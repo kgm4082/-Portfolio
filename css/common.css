@@ -330,16 +330,17 @@
 }
 .info {
     width: 1200px;
-    height: 167px;
 }
-/* 상단 컨텐츠 박스 */
+
+/********** 3-1. 상단 컨텐츠박스 **********/
 .info01_cont {
     margin-bottom: 26px;
     /* 플렉스박스 */
     display: flex;
     justify-content: space-between;
 }
-/* 상단 왼쪽 네비 바 */
+
+/*** 3-1-1. 상단 좌측 네비바 ***/
 .info_nav {
     /* 플렉스박스 */
     display: flex;
@@ -364,7 +365,7 @@
 .info_nav .bar_li .bar{
     width: 1px;
     height: 10px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #6f7178;
 }
 .info li a {
     font-size: 14px;
@@ -373,7 +374,8 @@
     letter-spacing: 0.25px;
     font-family: "NEXON Lv2 Gothic", sans-serif;
 }
-/* 상단 오른쪽 셀렉트 박스 */
+
+/*** 3-1-2. 상단 우측 셀렉트 박스 ***/
 .info_family {
     float: right;
     width: 160px;
@@ -395,4 +397,80 @@
     white-space: nowrap;
     min-height: 1.2em;
     padding: 0px 2px 1px;
+}
+
+/********** 3-2. 하단 컨텐츠박스 **********/
+.info02_cont {
+    display: flex;
+}
+
+/*** 3-3-1. 하단 좌측 하단로고 ***/
+.info_logo {
+    width: 38%;
+    padding-top: 14px;
+    text-align: center;
+}
+/*** 3-3-2-1. 하단 우측 상단 회사정보 ***/
+.info_text {
+    width: 62%;
+}
+.info_text span {
+    font-size: 14px;
+    color: #000000;
+    line-height: 22px;
+    letter-spacing: 0.25px;
+    font-family: "NEXON Lv2 Gothic", sans-serif;
+}
+.text01_cont span .bar {
+    font-size: 12px;
+    line-height: 20px;
+}
+/*** 3-3-2-2. 하단 우측 중간 주소 및 팩스  ***/
+.text02_cont {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+.text02_cont .addr {
+    padding: 4px 0;
+}
+.text02_cont .fax ul {
+    display: flex;
+}
+.fax ul li{
+    margin-left: 14px;
+}
+.fax ul li span{
+    display: block;
+    background-color: #af231c;;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 30px;
+    border-radius: 30px;
+}
+.fax ul li:last-child span {
+    background-color: #252525;
+    color: #b9b9b9;
+}
+/*** 3-3-2-3. 하단 우측 저작권  ***/
+.text03_cont .copyright {
+    margin-top: 20px;
+    text-align: right;
+}
+.text03_cont .copyright span {
+    font-size: 11px;
+    color: #000000;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.25px;
+    font-family: "Poppins", sans-serif;
+}
+/********** 3-3. 파트너 영역 **********/
+.partner {
+    width: 100%;
+    height: 120px;
+    background-color: #4b4e51;
 }
