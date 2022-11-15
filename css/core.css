@@ -12,7 +12,9 @@ font-family:"NotoSansKR", sans-serif;
 font-family:"NEXON Lv2 Gothic", sans-serif;
 font-family:"Poppins", sans-serif;
 */
-
+html,body{
+    overflow: hidden;
+}
 /********** 2. 공통 class **********/
 /* 상단영역 속박스 */
 .top.ibx {

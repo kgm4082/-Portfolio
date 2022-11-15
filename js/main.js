@@ -28,7 +28,7 @@ $(() => {
     // console.log("로딩완료!");
 
     // 변경대상: #slide li
-    const slide = $("#slide li");
+    const slide = $("#slide a");
 
     // 3. 변수셋팅:
     // 3-1.순번변수: 슬라이드순번 

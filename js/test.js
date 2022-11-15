@@ -2,7 +2,7 @@ $(() => {
     //////////////////// jQB ////////////////////
     window.onload = function () {
         // 변경대상: .section
-        const elm = document.querySelectorAll(".section");
+        const elm = document.querySelectorAll(".page");
         // elm의 길이
         const elmCount = elm.length;
         elm.forEach(function (item, index) {
