@@ -143,19 +143,17 @@ body {
 
 
 
-
 /***** 2-4. 섹션4 *****/
 .contens_con4 {
-    position: relative;
     max-width: 1200px;
+    height: 100vh;
     margin: 0 auto;
-    height: 100%;
-    /* background-color: grey; */
+    overflow: hidden;
 }
 /* 2-4-1. 공지사항 제목 */
 .contens_con4 .tit {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 156px;
 }
 .contens_con4 .tit span {
     display: block;
@@ -225,9 +223,6 @@ transition: 1s;
 }
 
 /* 2-4-4. 공지사항 게시글 */
-.contens_con4 > .notice {
-    margin-bottom: 95.5px;
-}
 .notice li {
     border-bottom: 1px solid #555555
 }

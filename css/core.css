@@ -25,13 +25,9 @@ html,body{
 }
 /* 메인영역 겉박스 */
 .section {
+    position: relative;
     height: 100vh;
     outline: 1px dashed gray;
-}
-.section.ibx {
-    position: relative;
-    padding-top: 106px;
-    height: 863px;
 }
 /* 하단영역 속박스 */
 .info.ibx {
