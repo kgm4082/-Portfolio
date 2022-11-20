@@ -76,14 +76,16 @@ $(() => {
         500
       );
 
-    switch (pno) {
+    // 블릿이동 
+    setTimeout(() => {
+      switch (pno) {
       case 0:
         msg.text("01");
         bar_line.animate({top: "0px"});
         break;
         case 1:
-            msg.text("02");
-            bar_line.animate({top: "19px"});
+        msg.text("02");
+        bar_line.animate({top: "19px"});
         break;
       case 2:
         msg.text("03");
@@ -112,6 +114,8 @@ $(() => {
       default:
         break;
     } //////// switch case ///////
+    }, 500);
+    
   }); ///////////// wheel ///////////////////
 
   // 스크롤 이벤트와 비교!
