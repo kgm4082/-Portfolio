@@ -353,6 +353,7 @@
     padding: 0 25px;
     margin-left: 20px;
     border-radius: 36px;
+    white-space: nowrap;
 }
 .info_nav nav:first-child {
     background-color: #8f9198;
@@ -367,7 +368,8 @@
     height: 10px;
     background-color: #6f7178;
 }
-.info li a,div {
+.info li a,
+.info li div {
     font-size: 14px;
     color: #ffffff;
     line-height: 36px;
@@ -439,6 +441,7 @@
 }
 .fax ul li{
     margin-left: 14px;
+    white-space: nowrap;
 }
 .fax ul li span{
     display: block;
