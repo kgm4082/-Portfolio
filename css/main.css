@@ -197,7 +197,6 @@ border-bottom: 2px solid #af231c;
 color: #af231c;
 transition: 1s;
 }
-/*  */
 /* 2-4-3. 공지사항 더보기 버튼 */
 .more_con {
     margin-top: 70px;
@@ -275,3 +274,12 @@ transition: 1s;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/***** 2-5. 섹션5 *****/
+.contens_con5 {
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+

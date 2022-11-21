@@ -368,8 +368,7 @@
     height: 10px;
     background-color: #6f7178;
 }
-.info li a,
-.info li div {
+.info li a {
     font-size: 14px;
     color: #ffffff;
     line-height: 36px;
