@@ -27,10 +27,11 @@ html,body{
 .section {
     position: relative;
     height: 100vh;
-    outline: 1px dashed gray;
+    /* outline: 1px dashed gray; */
 }
 .section.ibx {
-    height: calc(100vh-106px);
+    padding-top: 106px;
+    height:calc(100vh - 106px);
 }
 /* 하단영역 속박스 */
 .info.ibx {

@@ -151,14 +151,14 @@ body {
 /***** 2-4. 섹션4 *****/
 .contens_con4 {
     max-width: 1200px;
-    height: 100vh;
+    height:calc(100vh - 106px);
     margin: 0 auto;
     overflow: hidden;
 }
 /* 2-4-1. 공지사항 제목 */
 .contens_con4 .tit {
     text-align: center;
-    padding-top: 156px;
+    padding-top: 50px;
 }
 .contens_con4 .tit span {
     display: block;
