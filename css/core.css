@@ -12,9 +12,6 @@ font-family:"NotoSansKR", sans-serif;
 font-family:"NEXON Lv2 Gothic", sans-serif;
 font-family:"Poppins", sans-serif;
 */
-html,body{
-    overflow: hidden;
-}
 /********** 2. 공통 class **********/
 /* 상단영역 속박스 */
 .top.ibx {
@@ -42,7 +39,7 @@ html,body{
 }
 
 body {
-    background-color: #f6efea;
+    /* background-color: #f6efea; */
 }
 /* body * {
     border: 1px solid red;

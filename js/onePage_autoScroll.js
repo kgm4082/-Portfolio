@@ -1,6 +1,22 @@
 $(() => {
   /////////// jQB /////////////////////
 
+  let scrollSts = 0;
+
+  if($(window).width()<= 800){
+    scrollSts = 1;
+  }
+
+  $(window).resize(()=>{
+    if($(this).width()<= 800){
+      scrollSts = 1;
+    }
+    else{
+      scrollSts = 0;
+    }
+    console.log("휠사용여부:",scrollSts);
+  })
+
   // 페이지 이동을 위한 변수
   let pno = 0;
   let msg = $(".nav_cont .txt:first-child");
@@ -14,6 +30,8 @@ $(() => {
   let prot = 0; // 0-허용,1-금지
   $(document).on("mousewheel wheel", (e) => {
     // e-이벤트전달
+
+    if(scrollSts) return;
 
     //// 광스크롤 금지 /////
     if (prot) return;

@@ -6,16 +6,9 @@
 @import url(./core.css);
 @import url(./common.css);
 
-body {
-    -ms-overflow-style: none;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-/* html,body {
+html,body {
     overflow: hidden;
-} */
+}
 
 /********** 2. 메인영역 **********/
 .nav1 {
@@ -283,3 +276,27 @@ transition: 1s;
     overflow: hidden;
 }
 
+.lml {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+
+
+
+/* 미디어쿼리 */
+@media screen and (max-width:800px) {
+    html,body{
+        overflow: visible;
+    }
+
+    .section.ibx {
+        height: 600px;
+    }
+}
