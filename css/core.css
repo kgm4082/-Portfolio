@@ -29,9 +29,7 @@ font-family:"Poppins", sans-serif;
 .section.ibx {
   padding-top: 106px;
   height: calc(100vh - 106px);
-}
-.section.ibx:nth-child(5) {
-    background-color: #f9fafb;
+  overflow: hidden;
 }
 /* 하단영역 속박스 */
 .info.ibx {
@@ -43,7 +41,7 @@ font-family:"Poppins", sans-serif;
 
 body {
   /* background-color: #f6efea; */
-  background-color: #f7f6f3;
+  background-color: #f9fafb;
 }
 /* body * {
     border: 1px solid red;
