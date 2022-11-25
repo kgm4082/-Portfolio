@@ -380,7 +380,8 @@ font-size: 70px;
 .contens_con5 .contents .r_con .img_wrap {
     width: 475px;
     height: 729px;
-    background: url(../images/bg_phone_01.png);
+    /* background: url(../images/bg_phone_01.png); */
+    background: url(../images/coffeebay_sub01_info05_img_con_img.png) no-repeat center;
 }
 
 
