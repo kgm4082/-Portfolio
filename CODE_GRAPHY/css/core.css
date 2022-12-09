@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* 코드그라피 포트폴리오 공통클래스/웹폰트 CSS - core.css */
+/* 웹폰트, 공용클래스 */
+
+@import url(//cdn.design-factory.co.kr/_font/gotham/fonts.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('//cdn.wizbox.com/notosanskr.css');
+
+.header.ibx {
+  display: flex;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+#main {
+  padding-top: 80px;
+}

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CGP | 코드그라피(Code:graphy) 포트폴리오</title>
+        <!-- 파비콘 -->
+        <link rel="shortcut icon" href="../images/common/favicon.ico" />
+        <!-- 스와이퍼 CSS -->
+        <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+        <!-- 메인 CSS -->
+        <link rel="stylesheet" href="../css/main.css" />
+        <!-- 제이쿼리 라이브러리 CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <!-- 제이쿼리 UI CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <!-- 스와이퍼 JS 라이브러리 -->
+        <script src="../js/swiper-bundle.min.js"></script>
+        <!-- 공통 -->
+        <script src="../js/common.js"></script>
+    </head>
+    <body>
+        <!-- 1. 헤더영역 -->
+        <div id="header">
+            <!-- 1-1. 데스크탑(DESKTOP) -->
+            <div class="header ibx">
+                <div class="contents_box">
+                    <!-- 1-1-1. 로고 -->
+                    <div class="logo">
+                        <a href="">
+                            <img src="../images/common/main_logo.png" alt="메인로고" />
+                        </a>
+                    </div>
+                    <!-- 1-1-2. Global Navigation Bar -->
+                    <div class="GNB">
+                        <ul>
+                            <!-- 상품 -->
+                            <li class="">
+                                <a href=""><span>SHOP</span></a>
+                                <!-- Local Navigation Bar -->
+                                <div class="LNB">
+                                    <ul>
+                                        <li><a href="">BEST</a></li>
+                                        <li><a href="">OUTER</a></li>
+                                        <li><a href="">SET</a></li>
+                                        <li><a href="">PERTEX</a></li>
+                                        <li><a href="">TOP</a></li>
+                                        <li><a href="">BOTTOM</a></li>
+                                        <li><a href="">ACC</a></li>
+                                        <li><a href="">개인결제창</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- 룩북 -->
+                            <li>
+                                <a href=""><span>LOOKBOOK</span></a>
+                            </li>
+                            <!-- 매장찾기 -->
+                            <li>
+                                <a href=""><span>ABOUT US</span></a>
+                            </li>
+                            <!-- 커뮤니티 -->
+                            <li class="">
+                                <a href=""><span>COMMUNITY</span></a>
+                                <!-- Local Navigation Bar -->
+                                <div class="LNB">
+                                    <ul>
+                                        <li><a href="">NOTICE</a></li>
+                                        <li><a href="">Q&A</a></li>
+                                        <li><a href="">REVIEW</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 1-1-3. TAB -->
+                <div class="tab_box">
+                    <!-- 로그인 -->
+                    <li>
+                        <a href=""><span>LOGIN</span></a>
+                    </li>
+                    <!-- MYPAGE -->
+                    <li>
+                        <a href="">
+                            <svg class="svg-icon" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M939.904 821.333A439.296 439.296 0 0 0 633.557 503.34a233.259 233.259 0 0 0 111.574-198.87C745.13 175.915 640.555 71.296 512 71.296S278.87 175.915 278.87 304.469a233.259 233.259 0 0 0 111.573 198.87A439.296 439.296 0 0 0 84.096 821.333a103.595 103.595 0 0 0 19.541 89.088c21.035 26.88 52.608 42.24 86.614 42.24h643.456a109.227 109.227 0 0 0 86.613-42.24c20.139-25.6 27.221-58.069 19.584-89.088zM330.069 304.47c0-100.352 81.622-181.973 181.931-181.973s181.93 81.621 181.93 181.973S612.353 486.4 512 486.4s-181.93-81.621-181.93-181.93z m549.974 574.422a59.307 59.307 0 0 1-46.336 22.613H190.25a59.307 59.307 0 0 1-46.336-22.613 52.096 52.096 0 0 1-10.155-45.312C176.725 659.328 332.245 537.6 512 537.6s335.275 121.728 378.197 295.979a52.053 52.053 0 0 1-10.154 45.312z"  /></svg>
+                        </a>
+                        <!-- Local Navigation Bar -->
+                        <div class="LNB">
+                            <ul>
+                                <li><a href="">ORDER LIST</a></li>
+                                <li><a href="">PROFILE</a></li>
+                                <li><a href="">COUPON LIST</a></li>
+                                <li><a href="">MILEAGE</a></li>
+                                <li><a href="">BOARD</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 장바구니 -->
+                    <li>
+                        <a href="">
+                            <svg aria-hidden="true" class="pre-nav-design-icon" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"></path></svg>
+                        </a>
+                    </li>
+                    <!-- 위시리스트 -->
+                    <li>
+                        <a href="">   
+                            <svg aria-hidden="true" class="pre-nav-design-icon" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M16.794 3.75c1.324 0 2.568.516 3.504 1.451a4.96 4.96 0 010 7.008L12 20.508l-8.299-8.299a4.96 4.96 0 010-7.007A4.923 4.923 0 017.205 3.75c1.324 0 2.568.516 3.504 1.451l.76.76.531.531.53-.531.76-.76a4.926 4.926 0 013.504-1.451"></path></svg>
+                        </a>
+                    </li>
+                    <!-- 검색창 -->
+                    <li>
+                        <a href="">
+                            <svg class="svg-icon" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M192 480a256 256 0 1 1 512 0 256 256 0 0 1-512 0m631.776 362.496l-143.2-143.168A318.464 318.464 0 0 0 768 480c0-176.736-143.264-320-320-320S128 303.264 128 480s143.264 320 320 320a318.016 318.016 0 0 0 184.16-58.592l146.336 146.368c12.512 12.48 32.768 12.48 45.28 0 12.48-12.512 12.48-32.768 0-45.28"  /></svg>
+                        </a>
+                    </li>
+                </div>
+                <!-- 1-1-4. 위젯 레이어 -->
+                <div class="widget-layer">
+                    <div class="util-btn">
+                        <a href=""><div class="find"></div></a>
+                        <a href="https://pf.kakao.com/_CgIxjxb" target=”_blank><div class="talk"></div></a>
+                    </div>
+                    <div class="top-btn">
+                        <a href=""><div class="top"></div></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 2.메인영역 -->
+        <div id="main">
+            <div class="main">
+                <!-- 2-1. 메인배너 섹션 -->
+                <section id="section1">
+                    <!-- 매인배너 비디오 -->
+                    <a href="https://www.musinsa.com/brands/codegraphy" target=”_blank id="main_banner">
+                        <video autoplay="" loop="" muted="" playsinline="">
+                            <source src="//insup0125.hgodo.com/CGP/website/220816.mp4" type="">
+                        </video>
+                    </a>
+                    <!-- 마우스 스크롤 아이콘 -->
+                    <div class="scroll_down_icon">
+                        <span class="scroll_down_icon_mouse">
+                            <span class="scroll_down_icon_mouse_move"></span>
+                        </span>
+                        <div class="scroll_down_icon_text">스크롤을 내리세요!</div>
+                    </div>  
+                </section>
+                <!-- 2-2. 상품관련 섹션 -->
+                <section id="section2">
+                    <!-- 제목 -->
+                    <div class="tit">LANKING</div>
+                    <div class="tab">
+                        <div class="list">
+                                <div>BEST</div>
+                                <div>OUTER</div>
+                                <div>SET</div>
+                                <div>PERTEX</div>
+                                <div>TOP</div>
+                                <div>BOTTOM</div>
+                                <div>ACC</div>
+                        </div>
+                    </div>
+                    <!-- 컨텐츠 -->
+                    <div class="contents">
+                        <div class="items">
+                            <div class="bg2">
+                                <a href="">
+                                    <div class="b2g1"></div>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p class="name">[패딩 Ver.] 2-WAY 유틸리티 MA-1 자켓_그레이</p>
+                                <div class="price">
+                                    <p class="normal">89,000원</p>
+                                    <p class="sale">69,900원 21& OFF</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="bg2">
+                                <a href="">
+                                    <div class="b2g2"></div>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p class="name">[패딩 Ver.] 2-WAY 유틸리티 MA-1 자켓_그레이</p>
+                                <div class="price">
+                                    <p class="normal">89,000원</p>
+                                    <p class="sale">69,900원 21& OFF</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="bg2">
+                                <a href="">
+                                    <div class="b2g3"></div>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p class="name">[패딩 Ver.] 2-WAY 유틸리티 MA-1 자켓_그레이</p>
+                                <div class="price">
+                                    <p class="normal">89,000원</p>
+                                    <p class="sale">69,900원 21& OFF</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="bg2">
+                                <a href="">
+                                    <div class="b2g4"></div>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p class="name">[패딩 Ver.] 2-WAY 유틸리티 MA-1 자켓_그레이</p>
+                                <div class="price">
+                                    <p class="normal">89,000원</p>
+                                    <p class="sale">69,900원 21& OFF</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="bg2">
+                                <a href="">
+                                    <div class="b2g5"></div>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p class="name">[패딩 Ver.] 2-WAY 유틸리티 MA-1 자켓_그레이</p>
+                                <div class="price">
+                                    <p class="normal">89,000원</p>
+                                    <p class="sale">69,900원 21& OFF</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="bg2">
+                                <a href="">
+                                    <div class="b2g6"></div>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p class="name">[패딩 Ver.] 2-WAY 유틸리티 MA-1 자켓_그레이</p>
+                                <div class="price">
+                                    <p class="normal">89,000원</p>
+                                    <p class="sale">69,900원 21& OFF</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="bg2">
+                                <a href="">
+                                    <div class="b2g7"></div>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p class="name">[패딩 Ver.] 2-WAY 유틸리티 MA-1 자켓_그레이</p>
+                                <div class="price">
+                                    <p class="normal">89,000원</p>
+                                    <p class="sale">69,900원 21& OFF</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="bg2">
+                                <a href="">
+                                    <div class="b2g8"></div>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p class="name">[패딩 Ver.] 2-WAY 유틸리티 MA-1 자켓_그레이</p>
+                                <div class="price">
+                                    <p class="normal">89,000원</p>
+                                    <p class="sale">69,900원 21& OFF</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- more 박스 -->
+                    <div class="more">
+                        <a href="">
+                            <div class="btn">VIEW MORE</div>
+                        </a>
+                    </div>
+                </section>
+                <!-- 2-3. 룩북 관련  섹션 -->
+                <section id="section3">
+                    
+                </section>
+                <!-- 2-4. ABOUT US 관련 섹션 -->
+                <section id="section4">
+                  
+                </section>
+                <!-- 2-5. 인스타그램 섹션-->
+                <section id="section5">
+                    <!-- 제목 -->
+                    <div class="tit">
+                        <a href="https://www.instagram.com/code_graphy/">
+                            <img src="../images/common/tit_insta.png" alt="">
+                        </a>
+                    </div>
+                    <div class="contents">
+                        <a href="" class="bg5">
+                            <div class="b5g1"></div>
+                        </a>
+                        <a href="" class="bg5">
+                            <div class="b5g2"></div>
+                        </a>
+                        <a href="" class="bg5">
+                            <div class="b5g3"></div>
+                        </a>
+                        <a href="" class="bg5">
+                            <div class="b5g4"></div>
+                        </a>
+                        <a href="" class="bg5">
+                            <div class="b5g5"></div>
+                        </a>
+                        <a href="" class="bg5">
+                            <div class="b5g6"></div>
+                        </a>
+                        <a href="" class="bg5">
+                            <div class="b5g7"></div>
+                        </a>
+                        <a href="" class="bg5">
+                            <div class="b5g8"></div>
+                        </a>
+                        <a href="" class="bg5">
+                            <div class="b5g9"></div>
+                        </a>
+                        <a href="" class="bg5">
+                            <div class="b5g10"></div>
+                        </a>
+                        <a href="" class="bg5">
+                            <div class="b5g11"></div>
+                        </a>
+                        <a href="" class="bg5">
+                            <div class="b5g12"></div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- 3. 푸터영역 -->
+        <div id="footer">
+             <!-- 3-1. 데스크탑(DESKTOP) -->
+            <div class="footer ibx">
+                <div class="contents_box">
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* 코드그라피 포트폴리오 메인 페이지 CSS - main.css */
+
+/* 외부 CSS 합치기 */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+/******************** 2. 컨텐츠 영역 ********************/
+.main {
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0;
+}
+.contents {
+    margin: 0 auto;
+}
+.contents .tit {
+    display: block;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 53px;
+    font-family: 'Montserrat';
+    text-align: center;
+    margin-bottom: 15px;
+}
+.contents .scont p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
+}
