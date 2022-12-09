@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* 코드그라피 포트폴리오 미디어쿼리 페이지 CSS - media.css */
+@media (hover: hover) {
+    .category .contents img:hover {
+        scale: 1.1;
+        transition: .2s ease-in-out;
+    }
+    .best .contents .items .bg3:hover div {
+        scale: 1.02;
+        transition: .2s ease-in-out;
+    }
+    .best .btn:hover {
+        scale: 1.02;
+        transition: .2s;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    /* common  */
+    #header {
+        background-color: #fff;
+    }
+    .widget-layer .util-btn {
+        display: none;
+    }
+    /* main */
+    .banner #main_banner video {
+        display: none;
+    }
+    .banner #main_banner {
+        background: url(../images/main_banner.jpg) no-repeat center/cover;
+    }
+    .banner .scroll_down_icon {
+        display: none;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:1070px) {
+    /* html {
+        font-size: 9px;
+    } */
+    /* main */
+    .contents .tit {
+    }
+    .category .inner .contents {
+        /* 가로방향 3개 */
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+    .category .inner .tit {
+        max-width: 520px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:650px) {
+    html {
+        font-size: 9px;
+    }
+    .best .inner .contents {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+@media screen and (max-width:960px) {
+    .instagram .inner .contents {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
+@media screen and (max-width:720px) {
+    .instagram .inner .contents {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+@media screen and (max-width:400px) {
+    .instagram .inner .contents {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+

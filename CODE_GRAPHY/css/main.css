@@ -95,107 +95,148 @@ body{
     margin: 0 auto;
     padding: 150px 0 75px;
 }
-.category .tit {
+
+.category .inner {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+.category .inner .tit {
     display: block;
     font-weight: 800;
-    font-size: 46px;
+    font-size: 4rem;
     line-height: 53px;
     font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
     text-align: center;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
 }
-.category .tit span {
+.category .inner .tit span {
     background-color: #000;
     color: #fff;
 }
-.category .contents {
-    display: flex;
+.category .inner .contents {
+    display: grid;
     justify-content: center;
     padding-top: 30px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    padding: 0 30px;
 }
-.category .contents li {
-    padding: 0 10px;
-}
-.category .contents li a img {
+.category .inner .contents li a img {
 
-    width: 170px;
-    height: 245.37px;
+    max-width: 170px;
+    max-height: 245.37px;
 
-    /* width: 180px;
-    height: 260px; */
+    width: 100%;
+    height: 100%;
 }
-.category .contents img:hover {
+/* .category .inner .contents img:hover {
     scale: 1.1;
     transition: .2s ease-in-out;
-}
-
+} */
 /********** 2-4. BEST 상품 컨텐츠 **********/
 .best {
     max-width: 1440px;
     margin: 0 auto;
     padding: 100px 0;
 }
-.best .tit {
+.best .inner {
+    max-width: 1310px;
+    margin: 0 auto;
+}
+.best .inner .tit {
     display: block;
     font-weight: 800;
-    font-size: 46px;
+    font-size: 4rem;
     line-height: 53px;
     font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
-.best .contents {
+.best .inner .tit span {
+    font-size: 3.7rem;
+}
+.best .inner .contents {
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    /* grid-column-gap: 10px; */
-    
 }
-.best .contents .items .bg3 div{
-    width: 320px;
-    height: 320px;
-    /* height: 336px; */
+.best .inner .contents .items .bg3 div{
+    max-width: 320px;
+    max-height: 384px;
     border-radius: 20px;
 }
-.best .contents .items .bg3 .b3g1 {
+.best .contents .items .bg3 div::before {
+    content: '';
+    display: block;
+    padding-top: 120%;
+}
+/* .best .inner .contents .items .bg3:hover div {
+    scale: 1.02;
+    transition: .2s ease-in-out;
+} */
+.best .inner .contents .items .bg3 .b3g1 {
     background: url(../images/best/best_15.jpg) no-repeat center/cover;
 }
-.best .contents .items .bg3 .b3g2 {
+.best .inner .contents .items .bg3 .b3g2 {
     background: url(../images/best/best_14.jpg) no-repeat center/cover;
 }
-.best .contents .items .bg3 .b3g3 {
+.best .inner .contents .items .bg3 .b3g3 {
     background: url(../images/best/best_13.jpg) no-repeat center/cover;
 }
-.best .contents .items .bg3 .b3g4 {
+.best .inner .contents .items .bg3 .b3g4 {
     background: url(../images/best/best_12.jpg) no-repeat center/cover;
 }
-.best .contents .items .bg3 .b3g5 {
+.best .inner .contents .items .bg3 .b3g5 {
     background: url(../images/best/best_11.jpg) no-repeat center/cover;
 }
-.best .contents .items .bg3 .b3g6 {
+.best .inner .contents .items .bg3 .b3g6 {
     background: url(../images/best/best_10.jpg) no-repeat center/cover;
 }
-.best .contents .items .bg3 .b3g7 {
+.best .inner .contents .items .bg3 .b3g7 {
     background: url(../images/best/best_09.jpg) no-repeat center/cover;
 }
-.best .contents .items .bg3 .b3g8 {
+.best .inner .contents .items .bg3 .b3g8 {
     background: url(../images/best/best_08.jpg) no-repeat center/cover;
 }
-.best .contents .items .name {
+.best .inner .contents .items .info {
+    padding: 20px 5px;
+}
+.best .inner .contents .items .info .name {
+    display: block;
+    font-weight: 600;
+    font-size: 1.6rem;
+    font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
+    line-height: 25px;
+}
+.best .inner .contents .items .info .price {
     display: block;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.4rem;
     font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
-    text-align: center;
+    line-height: 30px;
+    text-decoration: line-through;
+}
+.best .inner .contents .items .info .sale {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.6rem;
+    font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
+    line-height: 30px;
+}
+.best .inner .contents .items .info .sale .per {
+    color: red;
+    padding-right: 10px;
 }
 
-.best .more {
-    padding-top: 40px;
+.best .inner .more {
+    padding-top: 60px;
     text-align: center;
     
 }
-.best .more .btn {
+.best .inner .more .btn {
     display: inline-block;
     width: 260px;
     height: 60px;
@@ -203,15 +244,16 @@ body{
     background: none;
     color: #191919;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 60px;
     text-align: center;
     outline: none;
-    font-family: 'Montserrat';
+    font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
 }
-
-
-
+/* .best .btn:hover {
+    scale: 1.02;
+    transition: .2s;
+} */
 
 /********** 2-6. 인스타그램 컨텐츠 **********/
 .instagram {
@@ -219,63 +261,68 @@ body{
     margin: 0 auto;
     padding: 100px 0
 }
-.instagram .tit {
+.instagram .inner .tit {
     margin-bottom: 32px;
     text-align: center;
 }
-.instagram .tit a {
+.instagram .inner .tit a {
     display: block;
 }
-.instagram .tit img {
+.instagram .inner .tit img {
     max-width: 100%;
 }
-.instagram .contents {
+.instagram .inner .contents {
     padding: 80px 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: 8px;
+    grid-gap: 10px;
 }
-.instagram .contents .bg5 {
+.instagram .inner .contents .bg5 {
     width: 100%;
 }
-.instagram .contents .bg5 div {
-    width: 233.3px;
-    height: 233.3px;
+.instagram .inner .contents .bg5 div {
+    max-width: 231.6px;
+    max-height: 231.6px;
     border-radius: 15px;
 }
-.instagram .contents .bg5 .b5g1 {
+.instagram .inner .contents .bg5 div::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+.instagram .inner .contents .bg5 .b5g1 {
     background: url(../images/instagram/instagram_01.jpg) no-repeat center/cover;
 }
-.instagram .contents .bg5 .b5g2 {
+.instagram .inner .contents .bg5 .b5g2 {
     background: url(../images/instagram/instagram_02.jpg) no-repeat center/cover;
 }
-.instagram .contents .bg5 .b5g3 {
+.instagram .inner .contents .bg5 .b5g3 {
     background: url(../images/instagram/instagram_03.jpg) no-repeat center/cover;
 }
-.instagram .contents .bg5 .b5g4 {
+.instagram .inner .contents .bg5 .b5g4 {
     background: url(../images/instagram/instagram_04.jpg) no-repeat center/cover;
 }
-.instagram .contents .bg5 .b5g5 {
+.instagram .inner .contents .bg5 .b5g5 {
     background: url(../images/instagram/instagram_05.jpg) no-repeat center/cover;
 }
-.instagram .contents .bg5 .b5g6 {
+.instagram .inner .contents .bg5 .b5g6 {
     background: url(../images/instagram/instagram_06.jpg) no-repeat center/cover;
 }
-.instagram .contents .bg5 .b5g7 {
+.instagram .inner .contents .bg5 .b5g7 {
     background: url(../images/instagram/instagram_07.jpg) no-repeat center/cover;
 }
-.instagram .contents .bg5 .b5g8 {
+.instagram .inner .contents .bg5 .b5g8 {
     background: url(../images/instagram/instagram_08.jpg) no-repeat center/cover;
 }
-.instagram .contents .bg5 .b5g9 {
+.instagram .inner .contents .bg5 .b5g9 {
     background: url(../images/instagram/instagram_09.jpg) no-repeat center/cover;
 }
-.instagram .contents .bg5 .b5g10 {
+.instagram .inner .contents .bg5 .b5g10 {
     background: url(../images/instagram/instagram_10.jpg) no-repeat center/cover;
 }
-.instagram .contents .bg5 .b5g11 {
+.instagram .inner .contents .bg5 .b5g11 {
     background: url(../images/instagram/instagram_11.jpg) no-repeat center/cover;
 }
-.instagram .contents .bg5 .b5g12 {
+.instagram .inner .contents .bg5 .b5g12 {
     background: url(../images/instagram/instagram_12.jpg) no-repeat center/cover;
 }
