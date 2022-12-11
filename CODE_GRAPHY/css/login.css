@@ -3,7 +3,46 @@
 
 /* 외부 CSS 합치기 */
 @import url(./reset.css);
-@import url(./core.css);
-@import url(./common.css);
+@import url(./style.css);
 
+legend {
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+}
 /******************** 2. 컨텐츠 영역 ********************/
+.main .contents_box {
+    font-size: 1.6rem;
+    margin-top: 100px;
+    font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
+    transition: .2s ease-in-out;
+}
+.main .contents_box .signIn {
+    position: relative;
+    width: 460px;
+    margin: 0 auto;
+    padding: 30px 0 200px 0;
+}
+.main .contents_box .signIn .tab {
+    display: flex;
+}
+.main .contents_box .signIn .tab li {
+    width: 50%;
+    text-align: center;
+    color: #696969;
+    border-bottom: 1px solid #d5d2d3;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+    font-size: 17px;
+}
+.main .contents_box .signIn .contents .tit {
+    width: 100%;
+    text-align: left;
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}

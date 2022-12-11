@@ -1,0 +1,475 @@
+@charset "utf-8";
+/* 코드그라피 포트폴리오 공통 클래스- style.css */
+/* 웹폰트 */
+
+@import url(//cdn.design-factory.co.kr/_font/gotham/fonts.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("//cdn.wizbox.com/notosanskr.css");
+
+.header.ibx {
+  display: flex;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+html {
+  font-size: 10px;
+}
+#main {
+  padding-top: 80px;
+}
+@media screen and (max-width: 1440px) {
+  #main {
+      padding-top: 70px;
+  }
+}
+/* 셀렉션 색상 변경 */
+::selection {
+  color: white;
+  background: black;
+}
+/* 이미지 드래그 방지 */
+img {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+/*********************** 1. 헤더영역 ***********************/
+/*************** 1-1. 데스크탑(DESKTOP) ***************/
+#header {
+  /* 상단영역 고정 */
+  position: fixed;
+  width: 100%;
+  /* 자동 줄바꿈 X */
+  white-space: nowrap;
+  /* 항상 맨위 */
+  z-index: 9999;
+}
+/* 스크롤시 헤더 배경색 변경 */
+#header.on {
+  background-color: #fff;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header .contents_box,
+.header .tab_box {
+  display: flex;
+  align-items: center;
+}
+/********** 1-1-0. 햄버거 버튼 **********/
+.header .contents_box .ham {
+  display: none;
+}
+.header .contents_box .ham a {
+  font-weight: 550;
+  display: block;
+  height: 70px;
+  line-height: 80px;
+  font-size: 15px;
+  color: #000;
+}
+/********** 1-1-1. 메인로고 **********/
+.header .contents_box .logo {
+  width: 220px;
+  margin-right: 30px;
+}
+.header .contents_box .logo a {
+  display: block;
+}
+.header .contents_box .logo img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+/********** 1-1-2. Global Navigation Bar **********/
+.header .contents_box .GNB > ul {
+  display: flex;
+}
+.header .contents_box .GNB > ul > li {
+  position: relative;
+  padding: 0 15px;
+}
+.header .contents_box .GNB > ul > li > a {
+  font-weight: 550;
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  font-size: 15px;
+  margin: 0 10px 0 0;
+  color: #000;
+}
+/********** 1-1-3. TAB **********/
+.header .tab_box > li {
+  position: relative;
+  padding: 0 15px;
+}
+.header .tab_box > li > a {
+  font-weight: 550;
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  font-size: 15px;
+  margin: 0 10px 0 0;
+  color: #000;
+}
+.header .tab_box svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/********** Local Navigation Bar **********/
+.header .contents_box .GNB .LNB,
+.header .tab_box .LNB {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  z-index: 999;
+  white-space: nowrap;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 0.3s;
+  transition: 0.3s ease-out;
+  padding: 10px 0;
+}
+.header .LNB ul {
+  margin: 0 15px;
+}
+.header .contents_box .GNB .LNB li,
+.header .tab_box .LNB li {
+  padding: 0 0 10px;
+  height: 18px;
+}
+.header .contents_box .GNB .LNB li a,
+.header .tab_box .LNB li a {
+  line-height: 1.3;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  display: block;
+}
+/***** 헤더영역 마우스 Hover 시 적용 *****/
+.header .contents_box .GNB li:hover .LNB,
+.header .tab_box li:hover .LNB {
+  opacity: 1;
+  visibility: unset;
+}
+/* .header .contents_box .GNB > ul > li:hover > a,
+.header .tab_box > li:hover > a {
+  color: #af231c;
+} */
+.header .contents_box .GNB > ul > li > a > span::after,
+.header .tab_box > li > a > span::after {
+  content: "";
+  display: block;
+  position: relative;
+  bottom: 17px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #af231c;
+  transition: width 0.2s ease-out;
+}
+.header .contents_box .GNB > ul > li:hover > a > span::after,
+.header .tab_box > li:hover > a > span::after {
+  width: 100%;
+  transition-delay: 0.3s;
+}
+.header .contents_box .LNB ul li:hover a,
+.header .tab_box .LNB ul li:hover a {
+  font-weight: bold;
+}
+/*************** 1-2. 모바일 LNB ***************/
+.mobx {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+}
+
+/*************** 1-3. 검색창 ***************/
+.sch_area {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100000;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
+  transition: .2s ease-in-out;
+}
+.sch_area.on {
+  display: block;
+  transition: .2s ease-in-out;
+}
+.sch_area .sch_cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.sch_area .sch_boxs {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  max-width: 400px;
+  height: 120px;
+}
+.sch_area .sch_boxs .sch_box {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.sch_area .sch_boxs .sch_box #search {
+  width: 100%;
+  height: 59px;
+  border: 0;
+  line-height: 60px;
+  padding: 0;
+  font-size: 20px;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+.sch_area .sch_boxs .sch_box #sbtn {
+  border: 0;
+  opacity: 0.8;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: 22px;
+  right: 5px;
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+  background: url(../images/common/w_search.svg) no-repeat center/cover;
+}
+.key_box {
+  width: 100%;
+  height: 60px;
+}
+.sch_area .sch_boxs .key_box .list {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.sch_area .sch_boxs .key_box .list li {
+  margin: 4px 3px;
+}
+.sch_area .sch_boxs .key_box .list li a {
+  display: block;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 33px;
+  padding: 0 18px;
+  background-color: #333;
+  border-radius: 17px;
+}
+/*************** 1-3. 위젯레이어 ***************/
+
+.widget-layer {
+  position: fixed;
+  right: 2.5%;
+  bottom: 3%;
+  transform: translateY(56px);
+  transition: transform 0.5s;
+}
+
+.widget-layer [class*="-btn"] {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 8px rgb(0 0 0 / 10%);
+  box-sizing: border-box;
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s ease-out;
+}
+.widget-layer div {
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  color: transparent;
+}
+.widget-layer .find {
+  position: relative;
+  background: url(../images/common/find.svg) center/24px auto no-repeat;
+}
+.widget-layer .talk {
+  position: relative;
+  background: url(../images/common/talk_icon.svg) center/24px auto no-repeat;
+}
+.widget-layer .top-btn {
+  margin-top: 8px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.widget-layer .top {
+  background: url(../images/common/arrow-top.svg) center/24px auto no-repeat;
+}
+/* .widget-layer a:hover {
+  background: #d4d4d4d3;
+  transition-delay: 0.5s;
+  transition: 0.5s ease-out;
+} */
+/* .widget-layer .top-btn:hover {
+  background: #d4d4d4d3;
+  transition-delay: 0.5s;
+  transition: 0.5s ease-out;
+} */
+/***** 위젯 레이어 on 클래스 *****/
+.widget-layer.on {
+  transform: translateY(0);
+}
+.widget-layer.on .top-btn {
+  opacity: 1;
+}
+
+/******************** 3. 푸터영역 ********************/
+#footer {
+  background-color: #f5f5f5;
+}
+/******************** 3-1. 데스크탑(DESKTOP) ********************/
+.footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체,
+    Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
+}
+.footer .info1 .info_nav {
+  margin-bottom: 30px;
+}
+.footer .info1 .info_nav ul {
+  display: flex;
+}
+.footer .info1 .info_nav ul li {
+  float: left;
+  margin-left: 30px;
+  font-weight: 600;
+}
+.footer .info1 .info_nav ul li:first-child {
+  margin-left: 0px;
+}
+.footer .info1 .info_nav ul li a {
+  color: #000;
+  font-size: 17px;
+}
+.footer .info1 .info_nav ul li a:hover {
+  color: #af231c;
+}
+.footer .info1 .des h1 {
+  line-height: 35px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.footer .info1 p {
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.footer .info1 .copy {
+  margin-top: 30px;
+}
+
+.footer .info2 h1 {
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.footer .info2 span {
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.footer .info2 p {
+  margin-top: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+/******************** 3-2. 모바일(MOBILE) ********************/
+.footer_mob {
+  display: none;
+  padding: 40px 10px;
+  font-size: 1.4rem;
+  font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체,
+    Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
+}
+.footer_mob .info1 .info_nav {
+  margin-bottom: 10px;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+.footer_mob .info1 .info_nav ul {
+  display: flex;
+}
+.footer_mob .info1 .info_nav ul li {
+  float: left;
+  font-weight: 600;
+}
+.footer_mob .info1 .info_nav ul li + li {
+  margin: 0 15px;
+}
+.footer_mob .info1 .info_nav ul li a {
+  color: #000;
+}
+.footer_mob .info2 {
+  padding: 10px 0;
+}
+.footer_mob .info2 h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 20px;
+}
+.footer_mob .info2 span {
+  margin: 0 auto;
+  line-height: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.footer_mob .info2 p {
+  line-height: 20px;
+  font-weight: 500;
+}
+.footer_mob .info3 {
+  text-align: left;
+}
+.footer_mob .info3 .des h1 {
+  font-size: 1.8rem;
+  line-height: 50px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.footer_mob .info3 .des p {
+  line-height: 20px;
+}
+.footer_mob .info3 .copy {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  line-height: 20px;
+  font-weight: 500;
+}

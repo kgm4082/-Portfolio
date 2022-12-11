@@ -1,90 +1,171 @@
 @charset "utf-8";
-/* 코드그라피 포트폴리오 미디어쿼리 페이지 CSS - media.css */
+/* 코드그라피 포트폴리오 공통 미디어쿼리 페이지 CSS - media.css */
+
+/*************** COMMON 공통 영역 ***************/
+
+/******* 모바일시 Hover 적용 안되게 *******/
 @media (hover: hover) {
-    .category .contents img:hover {
-        scale: 1.1;
-        transition: .2s ease-in-out;
-    }
-    .best .contents .items .bg3:hover div {
-        scale: 1.02;
-        transition: .2s ease-in-out;
-    }
-    .best .btn:hover {
-        scale: 1.02;
-        transition: .2s;
-    }
+  .header .contents_box .GNB > ul > li:hover > a,
+  .header .tab_box > li:hover > a {
+    /* 헤더 아이콘,글자 호버시 글자 변경 */
+    color: #af231c;
+  }
+  .header .tab_box > .sch:hover {
+    color: #af231c;
+  }
+  .widget-layer a:hover {
+    /* 위젯레이어 호버시 색상 및 트랜지션 변경 */
+    background: #d4d4d4d3;
+    transition-delay: 0.5s;
+    transition: 0.5s ease-out;
+  }
+  .widget-layer .top-btn:hover {
+    /* 맨위로가기버튼 호버시 색상 및 트랜지션 변경 */
+    background: #d4d4d4d3;
+    transition-delay: 0.5s;
+    transition: 0.5s ease-out;
+  }
+  .sch_area .sch_boxs .key_box .list li:hover {
+    scale: 1.02;
+  }
+}
+/******* 미디어쿼리 1440px *******/
+@media screen and (max-width: 1440px) {
+  #header {
+    /* 헤더의 색상변경 */
+    background-color: #fff;
+  }
+  .header.ibx {
+    /* 높이 및 패딩값 변경 */
+    height: 70px;
+    padding: 0 10px;
+  }
+  .header .contents_box .ham {
+    /* 햄버거버튼 보이게 */
+    display: block;
+  }
+  .header .contents_box .logo {
+    /* 로고 위치 변경 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    margin: 0;
+  }
+  .header .contents_box .GNB {
+    /* GNB 숨김 */
+    display: none;
+  }
+  .header .tab_box li {
+    /* 탭박스 숨김 */
+    display: none;
+  }
+  .header .tab_box .sch {
+    /* 검색아이콘 보이게 */
+    display: block;
+    padding: 0;
+  }
+  .header .tab_box .sch a {
+    /* 검색아이콘 위치변경 */
+    height: 70px;
+    line-height: 70px;
+    margin: 0;
+  }
+  .widget-layer .util-btn {
+    /* 위젯레이어 유틸부분 숨김 */
+    display: none;
+  }
+  .footer {
+    /* 푸터영역 숨기기 */
+    display: none;
+  }
+  .footer_mob {
+    /* 푸터영역 모바일 보이게 */
+    display: block;
+  }
 }
 
-@media screen and (max-width:1440px) {
-    /* common  */
-    #header {
-        background-color: #fff;
-    }
-    .widget-layer .util-btn {
-        display: none;
-    }
-    /* main */
-    .banner #main_banner video {
-        display: none;
-    }
-    .banner #main_banner {
-        background: url(../images/main_banner.jpg) no-repeat center/cover;
-    }
-    .banner .scroll_down_icon {
-        display: none;
-    }
+/*************** MAIN 페이지 영역 ***************/
+
+/******* 모바일시 Hover 적용 안되게 *******/
+@media (hover: hover) {
+  .category .inner .contents img:hover {
+    /* 카테고리 이미지 호버시 스케일업 */
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
+  }
+  .best .inner .contents .items .bg3:hover div {
+    /* best 상품 호버시 스케일업 */
+    scale: 1.02;
+    transition: 0.2s ease-in-out;
+  }
+  .best .inner .btn:hover {
+    /* best 상품 버튼 호버시 스케일업 */
+    scale: 1.02;
+    transition: 0.2s;
+  }
+  .instagram .inner .contents .bg5 div:hover::before {
+    /* 인스타그램 이미지 가상요소 ::before 호버시 색상넣기 */
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+  }
 }
 
-
-
-
-
-@media screen and (max-width:1070px) {
-    /* html {
-        font-size: 9px;
-    } */
-    /* main */
-    .contents .tit {
-    }
-    .category .inner .contents {
-        /* 가로방향 3개 */
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 520px;
-        margin: 0 auto;
-        padding: 0 30px;
-    }
-    .category .inner .tit {
-        max-width: 520px;
-        width: 100%;
-        margin: 0 auto;
-    }
+/******* 미디어쿼리 1440px *******/
+@media screen and (max-width: 1440px) {
+  .banner #main_banner video {
+    /* 비디오 숨김 */
+    display: none;
+  }
+  .banner #main_banner {
+    /* 비디오롤 사진으로 대체 */
+    background: url(../images/main_banner.jpg) no-repeat center/cover;
+  }
+  .banner .scroll_down_icon {
+    /* 마우스 스크롤 아이콘 숨김 */
+    display: none;
+  }
 }
-
-@media screen and (max-width:650px) {
-    html {
-        font-size: 9px;
-    }
-    .best .inner .contents {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
+/******* 미디어쿼리 1070px *******/
+@media screen and (max-width: 1070px) {
+  .category .inner .contents {
+    /* 카테고리 그리드 3개로 개수 변경 */
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 520px;
+    margin: 0 auto;
+  }
 }
-@media screen and (max-width:960px) {
-    .instagram .inner .contents {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    
+/******* 미디어쿼리 960px *******/
+@media screen and (max-width: 960px) {
+  .instagram .inner .contents {
+    /* 인스타그램 그리드 4개로 개수 변경*/
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-@media screen and (max-width:720px) {
-    .instagram .inner .contents {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
+/******* 미디어쿼리 720px *******/
+@media screen and (max-width: 720px) {
+  /* 인스타그램 그리드 3개로 개수 변경 */
+  .instagram .inner .contents {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-@media screen and (max-width:400px) {
-    .instagram .inner .contents {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
+/******* 미디어쿼리 650px *******/
+@media screen and (max-width: 650px) {
+  html {
+    /* html 전체크기 9px변경 */
+    font-size: 9px;
+  }
+  .best .inner .contents {
+    /* best상품 그리드 2개로 개수 변경 */
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
+/******* 미디어쿼리 400px *******/
+@media screen and (max-width: 400px) {
+  .instagram .inner .contents {
+    /* 인스타그램 그리드 2개로 개수 변경 */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

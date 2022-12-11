@@ -7,7 +7,7 @@
         <!-- 파비콘 -->
         <link rel="shortcut icon" href="../images/common/favicon.ico" />
         <!-- 스와이퍼 CSS -->
-        <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+        <!-- <link rel="stylesheet" href="../css/swiper-bundle.min.css"> -->
         <!-- 메인 CSS -->
         <link rel="stylesheet" href="../css/main.css" />
         <!-- 미디어쿼리 CSS -->
@@ -17,7 +17,7 @@
         <!-- 제이쿼리 UI CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
         <!-- 스와이퍼 JS 라이브러리 -->
-        <script src="../js/swiper-bundle.min.js"></script>
+        <!-- <script src="../js/swiper-bundle.min.js"></script> -->
         <!-- 공통 -->
         <script src="../js/common.js"></script>
     </head>
@@ -27,9 +27,26 @@
             <!-- 1-1. 데스크탑(DESKTOP) -->
             <div class="header ibx">
                 <div class="contents_box">
+                    <!-- 1-1-0. 햄버거 버튼 -->
+                    <div class="ham">
+                        <a href="">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Icons/24px/Menu</title>
+                                <defs>
+                                    <path d="M11.0024554,18 C11.514032,18 11.9356655,18.3827202 11.9932888,18.8826674 L12,19 C12,19.5522847 11.5536886,20 11.0024554,20 L3.99754465,20 C3.44661595,20 3,19.5561352 3,19 C3,18.4477153 3.4463114,18 3.99754465,18 L11.0024554,18 Z M20.0066023,11 C20.5160523,11 20.935933,11.3827202 20.9933167,11.8826674 L21,12 C21,12.5522847 20.5550537,13 20.0066023,13 L3.99339768,13 C3.44475929,13 3,12.5561352 3,12 C3,11.4477153 3.44494629,11 3.99339768,11 L20.0066023,11 Z M20.0066023,4 C20.5160523,4 20.935933,4.38272018 20.9933167,4.88266744 L21,5 C21,5.55228475 20.5550537,6 20.0066023,6 L3.99339768,6 C3.44475929,6 3,5.55613518 3,5 C3,4.44771525 3.44494629,4 3.99339768,4 L20.0066023,4 Z" id="path-1"></path>
+                                </defs>
+                                <g id="Icons/24px/Menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
                     <!-- 1-1-1. 로고 -->
                     <div class="logo">
-                        <a href="">
+                        <a href="index.html">
                             <img src="../images/common/main_logo.png" alt="메인로고" />
                         </a>
                     </div>
@@ -111,27 +128,43 @@
                         </a>
                     </li>
                     <!-- 검색창 -->
-                    <li>
-                        <a href="">
-                            <svg class="svg-icon" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M192 480a256 256 0 1 1 512 0 256 256 0 0 1-512 0m631.776 362.496l-143.2-143.168A318.464 318.464 0 0 0 768 480c0-176.736-143.264-320-320-320S128 303.264 128 480s143.264 320 320 320a318.016 318.016 0 0 0 184.16-58.592l146.336 146.368c12.512 12.48 32.768 12.48 45.28 0 12.48-12.512 12.48-32.768 0-45.28"  /></svg>
-                        </a>
+                    <li class="sch">
+                        <svg class="svg-icon" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M192 480a256 256 0 1 1 512 0 256 256 0 0 1-512 0m631.776 362.496l-143.2-143.168A318.464 318.464 0 0 0 768 480c0-176.736-143.264-320-320-320S128 303.264 128 480s143.264 320 320 320a318.016 318.016 0 0 0 184.16-58.592l146.336 146.368c12.512 12.48 32.768 12.48 45.28 0 12.48-12.512 12.48-32.768 0-45.28"  /></svg>
                     </li>
                 </div>
-                <!-- 1-1-4. 위젯 레이어 -->
-                <div class="widget-layer">
-                    <div class="util-btn">
-                        <a href=""><div class="find"></div></a>
-                        <a href="https://pf.kakao.com/_CgIxjxb" target=”_blank><div class="talk"></div></a>
-                    </div>
-                    <div class="top-btn">
-                        <a href=""><div class="top"></div></a>
-                    </div>
-
+            </div>
+            <!-- 1-2. 모바일 LNB -->
+            <div class="mobx">
+                <div class="mob_box">
+                    <div class="menu"></div>
                 </div>
             </div>
-            <!-- 1-2. 모바일(MOBILE) -->
-            <div class="mobx">
-                
+            <!-- 1-3. 검색창 -->
+            <div class="sch_area">
+                <div class="sch_cover"></div>
+                <div class="sch_boxs">
+                    <div class="sch_box">
+                        <input id="search" name="search" type="text" placeholder="검색어를 입력하세요" maxlength="25" style="outline: 0;">
+                        <input id="sbtn" name="submit" type="submit" value="">
+                    </div>
+                    <div class="key_box">
+                        <ul class="list">
+                            <li><a href=""># 헤비아우터</a></li>
+                            <li><a href=""># 플리스</a></li>
+                            <li><a href=""># 트레이닝셋업</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 1-4. 위젯 레이어 -->
+            <div class="widget-layer">
+                <div class="util-btn">
+                    <a href=""><div class="find"></div></a>
+                    <a href="https://pf.kakao.com/_CgIxjxb" target=”_blank><div class="talk"></div></a>
+                </div>
+                <div class="top-btn">
+                    <div class="top"></div>
+                </div>
             </div>
         </div>
         <!-- 2.메인영역 -->
@@ -154,9 +187,10 @@
                     </div>
                 </div>
                <!-- 2-2. 카테고리 컨텐츠  -->
-                <div class="category">
+                <div class="category ibx">
                     <div class="inner">
-                        <div class="tit"><p>오늘의 <span>OOTD</span> 는?</p></div>
+                        <!-- <div class="tit"><p>오늘의 <span>OOTD</span> 는?</p></div> -->
+                        <div class="tit"><p>CATEGORIES</p></div>
                         <ul class="contents">
                             <li>
                                 <a href="">
@@ -192,9 +226,9 @@
                     </div>
                 </div>
                 <!-- 2-3. BEST 상품 컨텐츠 -->
-                <div class="best">
+                <div class="best ibx">
                     <div class="inner">
-                        <div class="tit">오늘의 추천 상품 <span>⏳</span></div>
+                        <div class="tit">BEST ITEMS</div>
                         <div class="contents">
                             <div class="items">
                                 <div class="bg3">
@@ -331,12 +365,13 @@
                     <div class="contents"></div>
                 </div>
                 <!-- 2-6. 인스타그램 컨텐츠 -->
-                <div class="instagram">
+                <div class="instagram ibx">
                     <div class="inner">
                         <!-- 제목 -->
                         <div class="tit">
                             <a href="https://www.instagram.com/code_graphy/">
                                 <img src="../images/common/tit_insta.png" alt="인스타그램 로고">
+                                <!-- INSTAGRAM -->
                             </a>
                         </div>
                         <!-- 컨텐츠 -->
@@ -416,6 +451,38 @@
                 </div>
             </div>
             <!-- 3-2. 모바일(MOBILE) -->
+            <div class="footer_mob">
+                <div class="info1">
+                    <div class="info_nav">
+                        <ul>
+                            <li><a href="">이용약관</a></li>
+                            <li><a href="">개인정보처리방침</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">1:1문의</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info2">
+                    <h1>1833-9431</h1>
+                    <span>
+                        MON-FRI 10:00 ~ 17:00
+                        <br/>
+                        LUNCH 12:00 ~ 13:30
+                        <br/>
+                        주말, 공휴일 제외
+                    </span>
+                    <p>우리은행 1005-904-386101</p>
+                </div>
+                <div class="info3">
+                    <div class="des">
+                        <h1>COMPANY 콘트리트 웍스</h1>
+                        <p>회사주소 : 서울특별시 성동구 아차산로 66 (성수동2가) 4층(성수동2가, 대정빌딩)</p>
+                        <p>사업자등록번호 : 665-87-01689</p>
+                        <p>대표 : 채명석 전화번호 : 1833-9431 이메일문의 : cw@concreteworks.co.kr</p>
+                    </div>
+                    <div class="copy"><p>©CGP｜코드그라피(Code:graphy) All rights reserved.</p></div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

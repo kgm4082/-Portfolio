@@ -3,23 +3,33 @@
 $(() => {
     //////////////////// jQB ////////////////////
 
-    // 새로고침시 맨위로 이동
-    window.onload = function () {
-        setTimeout(function () {
-            scrollTo(0, 0);
-        }, 100);
-    };
-    // 로딩완료!
-    // console.log("로딩완료!");
-
     /*****************************************************
-        [ 스크롤 액션 기능구현]
-        ...
+        [ 1. 스크롤 액션 기능구현 ]
+        스크롤 위치값 100 이상일때 클래스 .on 생성
+        스크롤 위치값이 100미만일때 클래스 .on 제거
+
+        [ 2. 맨위로가기버튼 기능구현]
+        맨위로가기버튼 클릭시 스크롤탑 0으로 위치 이동
+
+        [ 3. 검색창 기능구현 ]
+        검색아이콘 클릭시 .on 클래스를 주어 나타내기
+        검색창 외의 영역클릭시 검색창 닫기
     *****************************************************/
-    // 변경대상: #top
+    // 변경대상
+
+    // 헤더
     const topA = $("#header");
     // 위젯 레이어
     const widget = $(".widget-layer");
+    // 맨위로가기 버튼
+    const topBTn = $(".widget-layer .top")
+    // 검색 아이콘
+    const sch = $(".sch");
+    // 검색창 영역
+    const schArea = $(".sch_area");
+    // 검색창 박스
+    const schBox = $(".sch_boxs");
+    
     // 스크롤위치변수
     let scTop;
     // 마지막 스크룰위치값
@@ -27,11 +37,9 @@ $(() => {
 
     //////// 스크롤 이벤트 함수 /////////////
     $(window).scroll(() => {
-        // 스크롤 위치값(this는 window)
+        // 현재 스크롤값 scTop에 저장
         scTop = $(this).scrollTop();
-        console.log(scTop)
-        // scrollTop() 메서드
-        // - 세로스크롤 위치값을 리턴하는 메서드
+        // 현재 스크롤 위치값 콘솔 출력
         //    console.log(scTop);
 
         // 1. 슬림메뉴 클래스on적용
@@ -40,24 +48,33 @@ $(() => {
             // 100px이상
             topA.addClass("on");
             widget.addClass("on");
-            // addClass(클래스명) - 클래스넣기
         } else {
             // 100px 미만
             topA.removeClass("on");
             widget.removeClass("on");
-            // removeClass(클래스명) - 클래스지우기
-            // 클래스명에 띄어쓰기로 복수의 클래스 적용가능!
         } //////// else /////////
 
-        // 마지막위치 업데이트 필수!
+        // 마지막위치 업데이트
         lastSc = scTop;
     });
-
-    var swiper = new Swiper(".mySwiper", {
-        pagination: {
-          el: ".swiper-pagination",
-          type: "fraction"
-        },
-      },500);
-
+    ////////// 맨위로가기 버튼 클릭 설정 /////////
+    topBTn.click(()=>{
+        $("html,body").animate(
+            {
+                scrollTop: "0",
+            },
+            800,
+            "easeOutQuart"
+            );
+        })
+    ////////// 검색창 클릭 설정 /////////
+    sch.click(()=>{
+        $(schArea).addClass("on");
+    })
+    ////////// 검색창 외의 영역 클릭시 검색창 닫기 설정 /////////
+    $(document).mouseup((e)=>{
+        if(schBox.has(e.target).length === 0){
+            $(schArea).removeClass("on");
+        }
+    })
 }); //////////////////// jQB ////////////////////

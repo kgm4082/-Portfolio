@@ -3,8 +3,7 @@
 
 /* 외부 CSS 합치기 */
 @import url(./reset.css);
-@import url(./core.css);
-@import url(./common.css);
+@import url(./style.css);
 
 /* 스크롤 숨기고 스크롤 기능은 살리기 */
 body{
@@ -16,6 +15,11 @@ body{
 }
 #main {
     padding-top: 0px;
+}
+@media screen and (max-width: 1440px) {
+    #main {
+        padding-top: 0;
+    }
 }
 /******************** 2. 컨텐츠 영역 ********************/
 
@@ -107,11 +111,7 @@ body{
     line-height: 53px;
     font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
     text-align: center;
-    padding-bottom: 40px;
-}
-.category .inner .tit span {
-    background-color: #000;
-    color: #fff;
+    margin-bottom: 40px;
 }
 .category .inner .contents {
     display: grid;
@@ -120,7 +120,7 @@ body{
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 1vw;
     grid-row-gap: 1vw;
-    padding: 0 30px;
+    padding: 20px 10px;
 }
 .category .inner .contents li a img {
 
@@ -138,7 +138,7 @@ body{
 .best {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 75px 0;
 }
 .best .inner {
     max-width: 1310px;
@@ -151,16 +151,13 @@ body{
     line-height: 53px;
     font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
     text-align: center;
-    margin-bottom: 60px;
-}
-.best .inner .tit span {
-    font-size: 3.7rem;
+    margin-bottom: 40px;
 }
 .best .inner .contents {
-    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+    padding: 20px 10px;
 }
 .best .inner .contents .items .bg3 div{
     max-width: 320px;
@@ -232,12 +229,13 @@ body{
 }
 
 .best .inner .more {
-    padding-top: 60px;
+    padding-top: 30px;
     text-align: center;
     
 }
 .best .inner .more .btn {
     display: inline-block;
+    border-radius: 50px;
     width: 260px;
     height: 60px;
     border: #191919 1px solid;
@@ -250,7 +248,7 @@ body{
     outline: none;
     font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
 }
-/* .best .btn:hover {
+/* .best .inner .btn:hover {
     scale: 1.02;
     transition: .2s;
 } */
@@ -259,10 +257,10 @@ body{
 .instagram {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 100px 0
+    padding: 75px 0;
 }
 .instagram .inner .tit {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
     text-align: center;
 }
 .instagram .inner .tit a {
@@ -272,10 +270,10 @@ body{
     max-width: 100%;
 }
 .instagram .inner .contents {
-    padding: 80px 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px;
+    padding: 10px;
 }
 .instagram .inner .contents .bg5 {
     width: 100%;
@@ -290,6 +288,11 @@ body{
     display: block;
     padding-top: 100%;
 }
+/* .instagram .inner .contents .bg5 div:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    transition: .3s ease-in-out;
+} */
 .instagram .inner .contents .bg5 .b5g1 {
     background: url(../images/instagram/instagram_01.jpg) no-repeat center/cover;
 }

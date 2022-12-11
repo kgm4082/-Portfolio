@@ -52,7 +52,7 @@ $(() => {
         // 앞뒤공백이 생긴다! 꼭 trim() 처리필수!
         let atxt = $(this).text().trim();
         // console.log(atxt);
-
+zzz
         // 2. 이동할 페이지 주소 할당하기
         let url;
         switch (atxt) {
