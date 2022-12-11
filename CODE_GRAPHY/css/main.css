@@ -95,6 +95,7 @@ body{
 }
 /********** 2-2. 카테고리 컨텐츠 **********/
 .category {
+    display: none;
     max-width: 1440px;
     margin: 0 auto;
     padding: 150px 0 75px;
@@ -130,15 +131,11 @@ body{
     width: 100%;
     height: 100%;
 }
-/* .category .inner .contents img:hover {
-    scale: 1.1;
-    transition: .2s ease-in-out;
-} */
-/********** 2-4. BEST 상품 컨텐츠 **********/
+/********** 2-3. BEST 상품 컨텐츠 **********/
 .best {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 75px 0;
+    padding: 150px 0 75px;
 }
 .best .inner {
     max-width: 1310px;
@@ -207,7 +204,7 @@ body{
     font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
     line-height: 25px;
 }
-.best .inner .contents .items .info .price {
+.best .inner .contents .items .info .normal {
     display: block;
     font-weight: 500;
     font-size: 1.4rem;
@@ -215,7 +212,7 @@ body{
     line-height: 30px;
     text-decoration: line-through;
 }
-.best .inner .contents .items .info .sale {
+.best .inner .contents .items .info .price {
     display: flex;
     justify-content: space-between;
     font-weight: 600;
@@ -223,7 +220,7 @@ body{
     font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
     line-height: 30px;
 }
-.best .inner .contents .items .info .sale .per {
+.best .inner .contents .items .info .price .per {
     color: red;
     padding-right: 10px;
 }
@@ -252,8 +249,126 @@ body{
     scale: 1.02;
     transition: .2s;
 } */
+/********** 2-4. 스타일링 컨텐츠 **********/
+.style {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 75px 15px;
+    font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
+}
+.style .inner .tit {
+    display: block;
+    font-weight: 800;
+    font-size: 4rem;
+    line-height: 53px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.style .inner .contents{
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.style .inner .contents .bg4 div {
+    width: 340px;
+    height: 476px;
+    border-radius: 15px;
+}
+.style .inner .contents .bg4 .b4g1 {
+    background: url(../images/style/style_01.jpg) no-repeat center/cover;
+}
+.style .inner .contents .bg4 .b4g2 {
+    background: url(../images/style/style_02.jpg) no-repeat center/cover;
+}
+.style .inner .contents .bg4 .b4g3 {
+    background: url(../images/style/style_03.jpg) no-repeat center/cover;
+}
+.style .inner .contents .info .keyword {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.style .inner .contents .info .keyword li {
+    cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  color: #777;
+  font-weight: 600;
+  line-height: 30px;
+  padding: 0 10px;
+  background-color: #f1f1f1;
+  /* border-radius: 17px; */
+  margin: 0 6px 5px;
+}
+.style .inner .contents .info {
+    width: 100%;
+}
+.style .inner .contents .info .name {
+    text-align: left;
+    display: block;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 25px;
+}
+.style .inner .contents .info .price {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.style .inner .contents .info .price .num {
+    display: flex;
+}
+.style .inner .contents .info .price .sale {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 30px;
+}
+.style .inner .contents .info .price .num .normal {
+    display: block;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 30px;
+    text-decoration: line-through;
+    padding-left: 5px;
+}
+.style .inner .contents .info .price .per {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 30px;
+    color: red;
+    padding-right: 10px;
+}
+/* 스와이퍼 박스 */
+.swiper {
+  max-width: 1800px;
+  height: auto;
+  margin: 0 auto;
+}
 
-/********** 2-6. 인스타그램 컨텐츠 **********/
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+
+
+/********** 2-5. 인스타그램 컨텐츠 **********/
 .instagram {
     max-width: 1440px;
     margin: 0 auto;

@@ -90,11 +90,6 @@
 
 /******* 모바일시 Hover 적용 안되게 *******/
 @media (hover: hover) {
-  .category .inner .contents img:hover {
-    /* 카테고리 이미지 호버시 스케일업 */
-    scale: 1.1;
-    transition: 0.2s ease-in-out;
-  }
   .best .inner .contents .items .bg3:hover div {
     /* best 상품 호버시 스케일업 */
     scale: 1.02;
@@ -126,6 +121,13 @@
   .banner .scroll_down_icon {
     /* 마우스 스크롤 아이콘 숨김 */
     display: none;
+  }
+  .category {
+    /* 카테고리 영역 보이게 */
+    display: block;
+  }
+  .best {
+    padding: 75px 0;
   }
 }
 /******* 미디어쿼리 1070px *******/
