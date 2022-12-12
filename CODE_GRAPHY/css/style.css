@@ -28,8 +28,12 @@ html {
 }
 /* 셀렉션 색상 변경 */
 ::selection {
-  color: white;
+  color: #fff;
   background: black;
+}
+::placeholder {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
 }
 /* 이미지 드래그 방지 */
 img {
@@ -198,7 +202,9 @@ img {
 
 /*************** 1-3. 검색창 ***************/
 .sch_area {
-  display: none;
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -207,11 +213,13 @@ img {
   z-index: 100000;
   background-color: rgba(0, 0, 0, 0.7);
   font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
-  transition: .2s ease-in-out;
+  transition: .3s ease-in-out;
 }
 .sch_area.on {
-  display: block;
-  transition: .2s ease-in-out;
+  /* display: block; */
+  visibility: visible;
+  opacity: 1;
+  transition: .3s ease-in-out;
 }
 .sch_area .sch_cover {
   position: absolute;

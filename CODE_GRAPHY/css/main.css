@@ -270,7 +270,7 @@ body{
 }
 .style .inner .contents .bg4 div {
     width: 340px;
-    height: 476px;
+    height: 510px;
     border-radius: 15px;
 }
 .style .inner .contents .bg4 .b4g1 {
@@ -281,6 +281,12 @@ body{
 }
 .style .inner .contents .bg4 .b4g3 {
     background: url(../images/style/style_03.jpg) no-repeat center/cover;
+}
+.style .inner .contents .bg4 .b4g4 {
+    background: url(../images/style/style_04.jpg) no-repeat center/cover;
+}
+.style .inner .contents .bg4 .b4g5 {
+    background: url(../images/style/style_05.jpg) no-repeat center/cover;
 }
 .style .inner .contents .info .keyword {
     display: flex;
