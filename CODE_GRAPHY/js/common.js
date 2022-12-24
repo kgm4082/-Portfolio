@@ -14,6 +14,9 @@ $(() => {
         [ 3. 검색창 기능구현 ]
         검색아이콘 클릭시 .on 클래스를 주어 나타내기
         검색창 외의 영역클릭시 검색창 닫기
+
+        [ 4. 햄버거 버튼 기능 구현 ]
+        
     *****************************************************/
     // 변경대상
 
@@ -29,6 +32,10 @@ $(() => {
     const schArea = $(".sch_area");
     // 검색창 박스
     const schBox = $(".sch_boxs");
+    // 햄버거 버튼
+    const ham = $(".ham");
+    // 햄버거 박스
+    const mobx = $(".mobx");
     
     // 스크롤위치변수
     let scTop;
@@ -77,4 +84,19 @@ $(() => {
             $(schArea).removeClass("on");
         }
     })
+    //
+    ham.click(()=>{
+        $(mobx).addClass("on");
+    })
+    //
+    $(document).mouseup((e)=>{
+        if(mobx.has(e.target).length === 0){
+            $(mobx).removeClass("on");
+        }
+    })
+
+    /* SHOP 클릭하면 하위 나옴 */
+    $(".mgnb span:contains('SHOP')").click(() => {
+        $(".mgnb span:contains('SHOP') .mlnb ").hide()
+    });
 }); //////////////////// jQB ////////////////////

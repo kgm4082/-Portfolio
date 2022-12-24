@@ -1,48 +1,130 @@
 @charset "utf-8";
-/* 코드그라피 포트폴리오 메인 페이지 CSS - main.css */
+/* 코드그라피 포트폴리오 로그인 페이지 CSS - login.css */
 
 /* 외부 CSS 합치기 */
 @import url(./reset.css);
 @import url(./style.css);
 
-legend {
-    visibility: hidden;
-    position: absolute;
-    left: -9999px;
-    top: -9999px;
-    width: 0;
-    height: 0;
-    line-height: 0;
-}
 /******************** 2. 컨텐츠 영역 ********************/
-.main .contents_box {
+.main .signIn_box {
     font-size: 1.6rem;
-    margin-top: 100px;
     font-family: Montserrat, "Noto Sans KR", Dotum, 돋움, DotumChe, 돋움체, Verdana, monospace, Corbel, AppleGothic, Helvetica, sans-serif;
     transition: .2s ease-in-out;
 }
-.main .contents_box .signIn {
+.main .signIn_box .signIn {
     position: relative;
-    width: 460px;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 30px 0 200px 0;
+    /* padding: 30px 0 200px 0; */
+    padding: 100px 20px;
 }
-.main .contents_box .signIn .tab {
+.main .signIn_box .signIn .tit {
+    margin-bottom: 40px;
+    color: #111111;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+.main .signIn_box .signIn .tab {
     display: flex;
 }
-.main .contents_box .signIn .tab li {
+.main .signIn_box .signIn .tab li {
     width: 50%;
     text-align: center;
-    color: #696969;
-    border-bottom: 1px solid #d5d2d3;
     padding-bottom: 20px;
     margin-bottom: 35px;
-    font-size: 17px;
+    font-size: 1.7rem;
 }
-.main .contents_box .signIn .contents .tit {
+.main .signIn_box .signIn .tab .member {
+    font-weight: bold;
+    color: #af231c;
+}
+.main .signIn_box .signIn .tab .no_member {
+    font-weight: normal;
+    color: #696969;
+}
+.main .signIn_box .signIn .minput label {
+    margin-top: 15px;
+    display: block;
+}
+.main .signIn_box .signIn .minput input {
+    margin-bottom: 20px;
+    height: 35px;
+    line-height: 35px;
     width: 100%;
-    text-align: left;
-    font-size: 21px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    padding: 2px 0;
+    border: 0 none;
+    border-bottom: 1px solid #8f8f91;
+    outline: none;
+    font-size: 1.6rem;
+}
+.main .signIn_box .signIn .btnbx {
+    display: flex;
+    margin: 55px 0 30px;
+}
+.main .signIn_box .signIn .btnbx .join{
+    width: 292.5px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.4rem;
+    background-color: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: center;
+    color: #000;
+}
+.main .signIn_box .signIn .btnbx input {
+    width: 292.5px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.4rem;
+    background-color: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+.main .signIn_box .signIn #login_btn {
+    background-color: #000;
+    color: #fff;
+    margin-right: 15px;
+}
+.main .signIn_box .signIn #lookup_btn {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+.main .signIn_box .signIn .addbtn a {
+    display: block;
+    text-align: center;
+    color: #000;
+}
+.main .signIn_box .signIn .sns_login {
+    display: flex;
+    margin: 0 auto;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.main .signIn_box .signIn .sns_login span{
+    background: url(../images/common/sns_new.png) no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+}
+.main .signIn_box .signIn .sns_login .naver {
+    background-position: 0 0;
+}
+.main .signIn_box .signIn .sns_login .kakao {
+    background-position: -115.5px 0;
+}
+.main .signIn_box .signIn .sns_login .apple {
+    background-position: right 0;
+}
+.main .signIn_box .signIn .des {
+    padding: 30px 0;
+}
+.main .signIn_box .signIn .guest_form {
+    display: none;
 }

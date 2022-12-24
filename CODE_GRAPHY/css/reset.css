@@ -54,21 +54,3 @@ table {
 a {
     text-decoration: none;
 }
-
-/* 셀렉트박스 기본설정 */
-select {
-    appearance: none;
-    -moz-appearance: none; /* Firefox */
-    -webkit-appearance: none; /* Safari and Chrome */
-	border: 0;
-}
-
-/* IE 기본 스타일 제거 */
-select::-ms-expand {
-    display: none; /* IE 10, 11 */
-}
-select {
-    /* background : url(이미지 경로) 좌우위치 상하위치 반복여부  */
-    background: url(../images/copy_family_select_arrow.png) 95.5% center
-        no-repeat;
-}

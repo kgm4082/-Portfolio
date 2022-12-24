@@ -106,6 +106,10 @@
     border-radius: 15px;
     transition: 0.3s ease-in-out;
   }
+  .style .inner .contents .bg4 div:hover {
+    scale: 1.01;
+    transition: 0.2s;
+  }
 }
 
 /******* 미디어쿼리 1440px *******/
@@ -127,6 +131,7 @@
     display: block;
   }
   .best {
+    /* 패딩 변경 */
     padding: 75px 0;
   }
 }
@@ -169,5 +174,14 @@
   .instagram .inner .contents {
     /* 인스타그램 그리드 2개로 개수 변경 */
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*************** JOIN 페이지 영역 ***************/
+
+/******* 미디어쿼리 1440px *******/
+@media screen and (max-width: 1440px) {
+  .main .signUp_box .signUp .minput .msg .text {
+    display: none;
   }
 }
