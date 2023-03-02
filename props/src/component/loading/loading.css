@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    background: url(./splash.jpg);
+    z-index: 999;
+}
+
+.loading.loaded {
+    /* display: none; */
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.loading-bar.loaded {
+    /* display: none; */
+    opacity: 0;
+    transition: 0.3s;
+}
