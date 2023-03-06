@@ -1,6 +1,9 @@
 import * as THREE from 'three';
 // import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import countryTexture from '../images/country-index-texture.png';
+import countryOutlines from '../images/country-outlines-4k.png';
+import countryInfos from '../images/country-info.json';
 import './main.css';
 
 function Main() {
@@ -75,7 +78,7 @@ function Main() {
     const loader = new THREE.TextureLoader();
     const geometry = new THREE.SphereGeometry(1, 64, 32);
 
-    const indexTexture = loader.load('https://threejs.org/manual/examples/resources/data/world/country-index-texture.png', render);
+    const indexTexture = loader.load(countryTexture, render);
     indexTexture.minFilter = THREE.NearestFilter;
     indexTexture.magFilter = THREE.NearestFilter;
 
@@ -108,7 +111,7 @@ function Main() {
       },
     ];
 
-    const texture = loader.load('https://threejs.org/manual/examples/resources/data/world/country-outlines-4k.png', render);
+    const texture = loader.load(countryOutlines, render);
     const material = new THREE.MeshBasicMaterial({map: texture});
     material.onBeforeCompile = function(shader) {
       fragmentShaderReplacements.forEach((rep) => {
@@ -121,15 +124,8 @@ function Main() {
     scene.add(new THREE.Mesh(geometry, material));
   }
 
-  async function loadJSON(url) {
-    const req = await fetch(url);
-    return req.json();
-  }
-
   let numCountriesSelected = 0;
-  let countryInfos;
   async function loadCountryData() {
-    countryInfos = await loadJSON('https://threejs.org/manual/examples/resources/data/world/country-info.json');  
 
     const lonFudge = Math.PI * 1.5;
     const latFudge = Math.PI;
