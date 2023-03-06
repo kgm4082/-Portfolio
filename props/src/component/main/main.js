@@ -368,7 +368,8 @@ function Main() {
     const height = canvas.clientHeight;
     const needResize = canvas.width !== width || canvas.height !== height;
     if (needResize) {
-      renderer.setSize(width, height, false);
+      // renderer.setSize(width, height, false);
+      renderer.setSize(window.innerWidth, window.innerHeight);
     }
     return needResize;
   }
@@ -391,6 +392,14 @@ function Main() {
     renderer.render(scene, camera);
   }
   render();
+
+  // 반응형 처리
+      function OnWindowResize(){
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      }
+      window.addEventListener('resize', OnWindowResize);
 
   function requestRenderIfNotRequested() {
     if (!renderRequested) {
