@@ -1,10 +1,12 @@
 import Main from './component/main/main';
 import Loading from './component/loading/loading';
+import Select from './component/select/select';
+import Info from './component/info/info';
 import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    Main();
+    Main()
   },[]);
   return (
     <>
@@ -12,24 +14,13 @@ function App() {
       <div id="container">
         <canvas id="c"></canvas>
         <div id="labels"></div>
-        <div className='header'>
-          <h2>WORLD MAP <br />CYBER MISSIONS </h2>
+        <div className='header banselect'>
+          <h5>WORLD MAP <br />CYBER MISSIONS </h5>
           <p>SELECT A MISSION TO BEGIN</p>
-          <h2>USA</h2>
+          <p className='cname'>USA</p>
         </div>
-        <div className='select'>
-          <h4>SELECT A REGION</h4>
-        </div>
-        <div className='interface'></div>
-        <div className='chat'></div>
-        <div className='footer'>
-          <div className='logo'>
-            {/* <img src=''/> */}
-          </div>
-          <div className='info'>
-              
-          </div>
-        </div>
+        <Select />
+        {/* <Info /> */}
       </div>
     </>
   );
