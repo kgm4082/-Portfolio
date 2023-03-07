@@ -3,7 +3,6 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import countryTexture from '../images/country-index-texture.png';
 import countryOutlines from '../images/country-outlines-4k.png';
-import countryInfos from '../images/country-info.json';
 import './main.css';
 
 function Main() {
@@ -15,6 +14,7 @@ function Main() {
 });
 
   const fov = 75;
+  // const fov = 45;
   /* const aspect = 2; */  // the canvas default
   const aspect = window.innerWidth / window.innerHeight;
   const near = 0.1;
@@ -84,6 +84,9 @@ function Main() {
 
     const pickingMaterial = new THREE.MeshBasicMaterial({map: indexTexture});
     pickingScene.add(new THREE.Mesh(geometry, pickingMaterial));
+      // geometry.rotateX(0);
+      // geometry.rotateY(15);
+      // geometry.rotateZ(0);
 
     const fragmentShaderReplacements = [
       {
@@ -124,8 +127,15 @@ function Main() {
     scene.add(new THREE.Mesh(geometry, material));
   }
 
+  async function loadJSON(url) {
+    const req = await fetch(url);
+    return req.json();
+  }
+
   let numCountriesSelected = 0;
+  let countryInfos;
   async function loadCountryData() {
+    countryInfos = await loadJSON('https://threejs.org/manual/examples/resources/data/world/country-info.json');
 
     const lonFudge = Math.PI * 1.5;
     const latFudge = Math.PI;
@@ -395,8 +405,6 @@ function Main() {
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
       }
-      window.addEventListener('resize', OnWindowResize);
-
   function requestRenderIfNotRequested() {
     if (!renderRequested) {
       renderRequested = true;
@@ -406,6 +414,8 @@ function Main() {
 
   controls.addEventListener('change', requestRenderIfNotRequested);
   window.addEventListener('resize', requestRenderIfNotRequested);
+  window.addEventListener('resize', OnWindowResize);
+
 }
 
 export default Main;
