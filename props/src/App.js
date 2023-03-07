@@ -15,12 +15,11 @@ function App() {
         <canvas id="c"></canvas>
         <div id="labels"></div>
         <div className='header banselect'>
-          <h5>WORLD MAP <br />CYBER MISSIONS </h5>
+          <h2>WORLD MAP <br />CYBER MISSIONS </h2>
           <p>SELECT A MISSION TO BEGIN</p>
-          <p className='cname'>USA</p>
+          <h3 className='cname'>USA</h3>
         </div>
         <Select />
-        {/* <Info /> */}
       </div>
     </>
   );
