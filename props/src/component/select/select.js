@@ -36,7 +36,7 @@ function Select() {
 
     return (
         <div className='select banselect'>
-          <h6>SELECT A REGION</h6>
+          <h3>SELECT A REGION</h3>
           <ul>
             <li className='asia'>
               <div className='box'>
