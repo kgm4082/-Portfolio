@@ -146,7 +146,6 @@ function Main() {
     const labelParentElem = document.querySelector('#labels');
     for (const countryInfo of countryInfos) {
       const {lat, lon, min, max, name} = countryInfo;
-
       // 헬퍼가 위도와 경도를 가리키게 바꿉니다.
       lonHelper.rotation.y = THREE.MathUtils.degToRad(lon) + lonFudge;
       latHelper.rotation.x = THREE.MathUtils.degToRad(lat) + latFudge;
@@ -171,6 +170,7 @@ function Main() {
     }
     requestRenderIfNotRequested();
   }
+  
   loadCountryData();
 
   const tempV = new THREE.Vector3();
@@ -182,6 +182,56 @@ function Main() {
     minArea: 20,
     maxVisibleDot: -0.2,
   };
+  
+  var v3position = {x : 0.589, y:-0.186, z:784};
+  // *****************************
+  function getPositionValeu(v3position){
+    if (!countryInfos) {
+      return;
+    }
+
+    const large = settings.minArea * settings.minArea;
+    // 카메라의 상대 방향을 나타내는 행렬 좌표를 가져옵니다.
+    normalMatrix.getNormalMatrix(camera.matrixWorldInverse);
+    // 카메라의 위치를 가져옵니다.
+    camera.getWorldPosition(cameraPosition);
+    for (const countryInfo of countryInfos) {
+      if(countryInfo.name === "Brazil"){
+        var setveposition = countryInfo.position;
+        camera.position.x = setveposition.x;
+        camera.position.y = setveposition.y;
+      }
+
+      const {position, elem, area, selected} = countryInfo;
+      const largeEnough = area >= large;
+      const show = selected || (numCountriesSelected === 0 && largeEnough);
+      if (!show) {
+        elem.style.display = 'none';
+        continue;
+      }
+
+
+      // 카메라의 방향에 기반해 위치를 조정합니다.
+      // 구체는 중점에 있고 구체의 반지름이 한 칸이기에 아래는
+      // 카메라에 상대적인 위치 벡터를 반환합니다.
+      tempV.copy(position);
+      tempV.applyMatrix3(normalMatrix);
+
+       // 카메라로부터 이 위치까지의 거리를 계산합니다.
+      cameraToPoint.copy(position);
+      cameraToPoint.applyMatrix4(camera.matrixWorldInverse).normalize();
+
+      // 카메라에서 현재 위치의 방향(벡터)값으로 카메라에서 지구본 위 위치값까지의
+      // 방향값을 구한 뒤, 이 값들로 스칼라곱을 구합니다.
+      // 1 = 카메라를 바라봄
+      // 0 = 카메라가 구체를 바라봤을 때 구체의 탄젠트(tangent) 지점에 있음
+      // < 0 = 다른 쪽을 바라봄
+      const dot = tempV.dot(cameraToPoint);
+
+      
+
+    }
+  }
 
   function updateLabels() {
     // JSON 파일을 아직 불러오지 않았을 경우
@@ -243,6 +293,7 @@ function Main() {
 
       // 정렬을 위해 z-index 값을 설정합니다.
       elem.style.zIndex = (-tempV.z * .5 + .5) * 100000 | 0;
+
     }
   }
 
@@ -325,8 +376,7 @@ function Main() {
     }
 
     // 포인터가 움직였다면 드래그로 간주합니다.
-    const position = getCanvasRelativePosition(event);
-    console.log(position);
+    const position = getCanvasRelativePosition(event); // {x : ㅁㅁㅁ, y : aaa}
     const moveDeltaSq = (startPosition.x - position.x) ** 2 +
                         (startPosition.y - position.y) ** 2;
     if (moveDeltaSq > maxMoveDeltaSq) {
@@ -334,13 +384,16 @@ function Main() {
     }
 
     const id = pickHelper.pick(position, pickingScene, camera);
+    
     if (id > 0) {
       const countryInfo = countryInfos[id - 1];
-      const selected = !countryInfo.selected;
+      const selected = !countryInfo.selected; // true
+
       if (selected && !event.shiftKey && !event.ctrlKey && !event.metaKey) {
         unselectAllCountries();
       }
       numCountriesSelected += selected ? 1 : -1;
+      console.log(countryInfo.selected);
       countryInfo.selected = selected;
       setPaletteColor(id, selected ? selectedColor : unselectedColor);
       paletteTexture.needsUpdate = true;

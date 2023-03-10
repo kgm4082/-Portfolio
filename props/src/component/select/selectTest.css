@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+  .select {
+    position: absolute;
+    top: 38%;
+    left: 10%;
+    font-family: 'Dosis', sans-serif !important;
+  }
+  .select h3 {
+    color: #9BDDFF;
+    font-weight: bold;
+  }
+  
+  .select ul .box {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    height: 50px;
+    background-color: rgba(25, 60, 92, 0.5);
+    border-radius: 5px;
+    border: 1px solid #3987B7;
+    color: #9BDDFF;
+    font-size: 19px;
+    font-weight: 500;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 7px;
+  }
+  .select ul .box .name {
+    padding-left: 10px;
+  }
+  .select ul .box .num {
+    position: relative;
+  }
+  .select ul .box .num::after {
+    /* position: absolute; */
+    content: '';
+      width: 15px; /* 사이즈 */
+      height: 15px; /* 사이즈 */
+      border-top: 5px solid #9BDDFF; /* 선 두께 */
+      border-right: 5px solid #9BDDFF; /* 선 두께 */
+      display: inline-block;
+      transform: rotate(135deg); /* 각도 */
+      top: 0; /* 기본 0px 값으로 해주세요 */
+      left: 0; /* 기본 0px 값으로 해주세요 */
+      margin-right: 10px;
+      margin-left: 20px;
+  }
+  .select ul .lnb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .select ul .lnb li {
+    display: flex;
+    align-items: center;
+    width: 248px;
+    height: 50px;
+    margin-bottom: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Display None */
+  .select ul li .displayNone li {
+    display: none;
+  }
+  /* 잠김 */
+  .select ul .lnb li.lock {
+    border: 1px solid #ffffff; 
+  }
+  .select ul .lnb li.lock img {
+    width: 23px;
+    height: 23px;
+    filter: brightness(0) invert(1);
+    margin: 0 7px;
+  }
+  .select ul .lnb li.lock .text {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.1;
+    font-weight: 500;
+  }
+  .select ul .lnb li.lock:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  /* 뱃지 / 학교*/ 
+  .select ul .lnb li.school,
+  .select ul .lnb li.stella {
+    border: 1px solid #E6C776;
+  }
+  .select ul .lnb li.school img {
+    width: 23px;
+    height: 23px;
+    margin: 0 7px;
+  }
+  .select ul .lnb li.stella img {
+    width: 23px;
+    height: 23px;
+    margin: 0 5px;
+  }
+  .select ul .lnb li.school .text,
+  .select ul .lnb li.stella .text {
+    color: #E6C776;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.1; 
+    font-weight: 500;
+  }
+  .select ul .lnb li.school:hover,
+  .select ul .lnb li.stella:hover{
+    background-color: rgba(230, 198, 118, 0.5);
+  }
+  /* 시나리오 */
+  .select ul .lnb li.scenario {
+    border: 1px solid #4CB1E7;
+  }
+  .select ul .lnb li.scenario img {
+    width: 23px;
+    height: 23px;
+    margin: 0 5px;
+    transform: scaleX(-1);
+  }
+  .select ul .lnb li.scenario .text {
+    color: #4CB1E7;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.1; 
+    font-weight: 500;
+  }
+  .select ul .lnb li.scenario:hover {
+    background-color: rgba(76, 177, 231, 0.5);
+  }
