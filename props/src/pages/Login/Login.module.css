@@ -1,0 +1,118 @@
+/* 몰입형 사이버 모의훈련을 위한 AI 기반 온라인 사이버 레인지 학습 플랫폼 기술 개발 / 로그인 CSS - Login.module.css */
+
+.bg {
+    background: url(../../../public/assets/img/background.png) no-repeat center/cover;
+}
+.wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+}
+.header p {
+    margin: 0;
+    white-space: nowrap;
+}
+.form {
+    max-width: 415px;
+    margin: 0 auto;
+}
+.formGroup {
+    position: relative;
+    margin-bottom: 1rem;
+}
+input[type=text].formControl,
+input[type=password].formControl,
+input[type=submit].formControl{
+    background: transparent;
+    font-size: 1rem;
+    border: none;
+    height: 50px;
+    color: black;
+    font-weight: 600;
+    border: 1px solid transparent;
+    background: #fff;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+input[type=submit].formControl{
+    background: #000;
+    color: #fff;
+}
+input[type=checkbox].formControl{
+    display: none;
+}
+.loginWrap {
+    padding-top: 10rem;
+}
+.fieldIcon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /* color: rgba(255, 255, 255, 0.9); */
+    color: rgba(0, 0, 0, 0.8);
+}
+.fieldIcon::before {
+    cursor: pointer;
+}
+.checkboxWrap {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkboxWrap input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.checkboxWrap input:checked ~ .checkmark:after {
+    display: block;
+    content: "\f14a";
+    font-family: "FontAwesome";
+    color: #fff;
+}
+.checkmark:after {
+    content: "\f0c8";
+    font-family: "FontAwesome";
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    margin-top: -4px;
+}
+.logo {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+.logo img {
+    width: 150px;
+    height: 36px;
+}

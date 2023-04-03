@@ -1,0 +1,45 @@
+
+
+main div {
+    /* width: 200px; */
+    /* height: 200px; */
+    background-color: red;
+    border-radius: 10px;
+}
+span img {
+    width: 30px;
+    height: 30px;
+}
+
+.main {
+    margin: 20 0;
+}
+
+.cdc {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    max-height: 100vh;
+    
+}
+.cdc > div {
+    overflow-y: scroll;
+    width: 100%;
+    height: calc(100vh - 74px);
+
+
+}
+/* .sbs {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    max-height: 100vh;
+    
+}
+.sbs > div {
+    overflow-y: hidden;
+    width: 100%;
+    height: calc(100vh - 74px);
+
+
+} */

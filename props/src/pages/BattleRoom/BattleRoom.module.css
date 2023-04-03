@@ -1,0 +1,15 @@
+
+
+.cont {
+    display: flex;
+    justify-content: space-evenly;    
+    width: 100%;
+    height: calc(100vh - 74px);
+    align-items: center;
+}
+.title {
+    font-size: 23px;
+    color: white;
+    font-weight: bold;
+    margin: 0 6rem;
+}
